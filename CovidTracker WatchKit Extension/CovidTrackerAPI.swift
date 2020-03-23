@@ -173,7 +173,7 @@ class CovidTrackerAPI {
          fetchResources(url: trackerUrl, completion: result)
        }
     
-    public func fetchStateInfo(from endpoint: Endpoint = .usCurrent, result: @escaping (Result<[USCurrent], APIServiceError>) -> Void) {
+    public func fetchCounties(from endpoint: Endpoint = .counties, result: @escaping (Result<[Counties], APIServiceError>) -> Void) {
             let trackerUrl = baseURL
                 .appendingPathComponent("api")
                 .appendingPathComponent(endpoint.rawValue)
