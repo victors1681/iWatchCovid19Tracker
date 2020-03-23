@@ -6,11 +6,19 @@
 //  Copyright © 2020 Victor Santos. All rights reserved.
 //
 
-import SwiftUI
+import SwiftUI 
+
+ 
 
 struct ContentView: View {
+ 
     var body: some View {
         Text("Hello, World!")
+            .onAppear(){
+                CovidTrackerAPI.shared.fetchState(from: .currentStates) { (states) in
+                    print(states)
+                }
+        }
     }
 }
 
