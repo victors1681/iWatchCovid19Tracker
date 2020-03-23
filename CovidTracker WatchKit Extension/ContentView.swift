@@ -82,7 +82,7 @@ struct ContentView: View {
                 .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
     
             chart()
-        }.padding().background(ImageViewContainer(imageURL: "https://source.unsplash.com/1600x900/?quarantine,ny").opacity(0.3))
+        }.padding().background(ImageViewContainer(imageURL: "https://source.unsplash.com/1600x900/?quarantine,\(usState)").opacity(0.3))
       
     
     } 
