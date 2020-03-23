@@ -84,6 +84,7 @@ extension LocationManager: CLLocationManagerDelegate {
             print(placemark?.country)
             print(placemark?.administrativeArea)
         }
+ 
         print(#function, location)
     }
     

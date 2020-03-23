@@ -49,19 +49,20 @@ struct ContentView: View {
         return covidTracker.stateInfo
     }
     
-    var state: String {
+    var usState: String {
         guard let placeMarkInfo = locationManager.plasceMark else { return "" }
-        //updateUI(placeInfo: placeMarkInfo)
+       
+       self.covidTracker.fetchStateApi(state: placeMarkInfo.administrativeArea ?? "")
         return placeMarkInfo.administrativeArea ?? ""
        }
+    
     
     
     var body: some View {
         
         VStack(alignment: .leading, spacing: 2){
-  
             
-            Text("Covid19 Tracker: \(state)")
+            Text("Covid19 Tracker: \(usState)")
                 .font(.caption)
                 .lineLimit(nil)
                 .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
@@ -83,7 +84,7 @@ struct ContentView: View {
     
             chart()
         }.padding().onAppear(){
-            self.covidTracker.fetchStateApi()
+           // self.covidTracker.fetchStateApi(state: self.usState)
         }
       
     

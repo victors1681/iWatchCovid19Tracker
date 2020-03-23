@@ -157,12 +157,15 @@ class CovidTrackerAPI: ObservableObject {
       fetchResources(url: trackerUrl, completion: result)
     }
     
-    public func fetchStateApi(){
+    public func fetchStateApi(state: String = "NY"){
+        let currentState = self.stateInfo?.state
+        
+        if(currentState == nil || currentState != state){
         self.fetchState(from: .currentStates) { (result) in
                   
                   switch result {
                   case .success(let states):
-                    guard let currentState = states.filter({ $0.state == "NY" }).first else { return }
+                    guard let currentState = states.filter({ $0.state == state }).first else { return }
                       
                     self.stateInfo = currentState
                       //print(currentState)
@@ -170,6 +173,7 @@ class CovidTrackerAPI: ObservableObject {
                       print(error.localizedDescription)
                   }
               }
+        }
     }
     
     public func fetchStateDaily(from endpoint: Endpoint = .stateDaily, result: @escaping (Result<[StateDaily], APIServiceError>) -> Void) {
