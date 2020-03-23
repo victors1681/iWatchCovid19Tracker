@@ -1,0 +1,16 @@
+PODS:
+  - YOChartImageKit (1.2.1)
+
+DEPENDENCIES:
+  - YOChartImageKit (~> 1.1)
+
+SPEC REPOS:
+  trunk:
+    - YOChartImageKit
+
+SPEC CHECKSUMS:
+  YOChartImageKit: bd73e66857c848325bef87edc40595d72a6b5fbe
+
+PODFILE CHECKSUM: 4a8ca7e2ed6344e991fd2cfd7ca4301f7de89bff
+
+COCOAPODS: 1.9.1

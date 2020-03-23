@@ -35,6 +35,12 @@ class LocationManager: NSObject, ObservableObject {
             objectWillChange.send()
         }
     }
+    
+    @Published var plasceMark: CLPlacemark? {
+        willSet {
+            objectWillChange.send()
+        }
+    }
 
     var statusString: String {
         guard let status = locationStatus else {
@@ -74,6 +80,7 @@ extension LocationManager: CLLocationManagerDelegate {
         guard let loc = self.locationManager.location else { return }
         
         getPlace(for: loc) { (placemark) in
+            self.plasceMark = placemark
             print(placemark?.country)
             print(placemark?.administrativeArea)
         }

@@ -1,0 +1,1179 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BE237E8470AC6DBF4930F1725216D36 /* YOChartImageKit-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6E66761709E048875C6CC9AD21CF7C /* YOChartImageKit-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C1BDD653E804A80B7183293B410EEE0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57BD78C055F920659F224FC101FFE9C /* UIKit.framework */; };
+		142830721F0E39C933CFB24B936047A0 /* YOBarChartImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CD7365E7CB31704B703861DAF14C573 /* YOBarChartImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B06F67D0740DB39310B53A966CE4F90 /* Pods-CovidTracker WatchKit App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C145D56D74869E87F25527FF3525B48 /* Pods-CovidTracker WatchKit App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DD68402A2258213416DE3F9B703558A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4A4A4E7D0138AEC7E49535FD24F20 /* Foundation.framework */; };
+		302C3FAA24BD7B35095C4CEBB1124518 /* Pods-CovidTracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D340E15128BEDEEE204B63E666248 /* Pods-CovidTracker-dummy.m */; };
+		393E0F8B904E4E570365262E96A4765D /* YOChartImageKit-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAF62DAE054DDFFC756E6EDDB7A2D9F /* YOChartImageKit-watchOS-dummy.m */; };
+		3BA3497D29D1F671F2EF658B77C2F164 /* YODonutChartImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5F0ABD0271B55F4F48C155FE2D2DA /* YODonutChartImage.m */; };
+		3E423354CBDDA6BCEAB3DE74E3DE5518 /* YOChartImageKit-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEAC302B6C4C7E2FA6807F28680605A8 /* YOChartImageKit-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CBCA7C5563D6B47AB6D475617F0BA8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F79535FA815BDF3815852CF99752A5 /* Foundation.framework */; };
+		4CF49B438EC19A45A5ECDA64D90510BD /* YOChartImageKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FADB0684D6262C77D219ACEFBCF5041 /* YOChartImageKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		569C13BC7D4345F89D3754D07D072095 /* Pods-CovidTracker WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8080BECA1C40FB7CF65CFE654DD3AC91 /* Pods-CovidTracker WatchKit Extension-dummy.m */; };
+		5919B827BF2C855A0B3415217564402B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F79535FA815BDF3815852CF99752A5 /* Foundation.framework */; };
+		5A14F34B8B4D8BE117DE15F8FF3AF710 /* YODonutChartImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E03199ADF21C5907494B575932DCB02 /* YODonutChartImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76260FB208FC0E86A6FC6AE15416B399 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F79535FA815BDF3815852CF99752A5 /* Foundation.framework */; };
+		77548E6C84FF74166152D70FA5C70A73 /* Pods-CovidTracker WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CA550B3B6A5528A57DC1416AC76922 /* Pods-CovidTracker WatchKit App-dummy.m */; };
+		7898D6EC6BDD95B77FC3D38B4D3679D5 /* Pods-CovidTracker WatchKit Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7285DFE9A3DE840A08573357836DF672 /* Pods-CovidTracker WatchKit Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84AFC3072180FE7559FA5D54074E86EA /* YOChartImageKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FADB0684D6262C77D219ACEFBCF5041 /* YOChartImageKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		852A47EF575B804AB9634D3388D8F67B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B379C4868B4F992D3113314EB5B2531 /* UIKit.framework */; };
+		A4C814C1083487B17A735CD187CFC8FF /* YOBarChartImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 478627FB18210AB5FB1173776816B0E5 /* YOBarChartImage.m */; };
+		A585431FC8F5FBF7E873D64BD1AC794C /* YOLineChartImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C15801F5E22C29F2A535F209A303CBC7 /* YOLineChartImage.m */; };
+		AD225D6E8DB8378876ECABCE9846965F /* YOBarChartImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 478627FB18210AB5FB1173776816B0E5 /* YOBarChartImage.m */; };
+		BC22CE53779F2796C825BC347522947D /* YOChartImageKit-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15229BC3E36149253830291BBC1D62EC /* YOChartImageKit-iOS-dummy.m */; };
+		BFB1575BC21BB210140CD196156B4A8F /* YODonutChartImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5F0ABD0271B55F4F48C155FE2D2DA /* YODonutChartImage.m */; };
+		C1DD49B109EDE5B10641BD91BE32BDE6 /* Pods-CovidTracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 456BFCE773605AA7DD4C9F601CDF19C9 /* Pods-CovidTracker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1D247C6A61663C2CC3EE152CE128CFC /* YODonutChartImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E03199ADF21C5907494B575932DCB02 /* YODonutChartImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D267B13F227241D3581D6C8509265BEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4A4A4E7D0138AEC7E49535FD24F20 /* Foundation.framework */; };
+		D969A85A35A254855F6AA890976FA940 /* YOBarChartImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CD7365E7CB31704B703861DAF14C573 /* YOBarChartImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEB3508014D1078027181A6DC4D6B9A7 /* YOLineChartImage.h in Headers */ = {isa = PBXBuildFile; fileRef = A3D04D71F42C07252BE546688C7B56E5 /* YOLineChartImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6E9C35D08EA717D7E1987C6AF59EC55 /* YOLineChartImage.h in Headers */ = {isa = PBXBuildFile; fileRef = A3D04D71F42C07252BE546688C7B56E5 /* YOLineChartImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA5F64756470DC1DB2826517436B0492 /* YOLineChartImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C15801F5E22C29F2A535F209A303CBC7 /* YOLineChartImage.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0293572402DD445532B0E7D8E5101960 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F8DA0599E64EA7FB32EAF7B8FB1187B;
+			remoteInfo = "YOChartImageKit-iOS";
+		};
+		447EB2662EDD01D8E76611BEFD3EF6E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F8DA0599E64EA7FB32EAF7B8FB1187B;
+			remoteInfo = "YOChartImageKit-iOS";
+		};
+		6AF12276F4E1060342720B960EF2A101 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD0B034C062E72EAE082B1B8DF0DA22A;
+			remoteInfo = "YOChartImageKit-watchOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02D47C4B8C503EF406260BB566179AC3 /* Pods-CovidTracker WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CovidTracker WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		035DD78181C3EA5B4F8F7A64DBAB7F6C /* Pods-CovidTracker WatchKit Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CovidTracker WatchKit Extension-frameworks.sh"; sourceTree = "<group>"; };
+		0550FFA2C6E33004A205A09F05865AEC /* Pods-CovidTracker WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CovidTracker WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		05A321A020AD0D8501498B4AD2FD0A76 /* Pods_CovidTracker_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CovidTracker_WatchKit_App.framework; path = "Pods-CovidTracker WatchKit App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07503C02BD49ECA9D32FD314D509F77B /* Pods-CovidTracker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CovidTracker-frameworks.sh"; sourceTree = "<group>"; };
+		0CB236F1392A943BDD2392CFA3BE03BF /* Pods-CovidTracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CovidTracker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		15229BC3E36149253830291BBC1D62EC /* YOChartImageKit-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YOChartImageKit-iOS-dummy.m"; sourceTree = "<group>"; };
+		1BD1882A5CB3BCA65AA9CA209547CD06 /* Pods-CovidTracker WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CovidTracker WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		21D9BC57D443177DAB3E2EE5A6B65293 /* Pods-CovidTracker WatchKit Extension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CovidTracker WatchKit Extension-Info.plist"; sourceTree = "<group>"; };
+		21DE0C1AA6C5EAD70466C49F25F29B62 /* Pods-CovidTracker WatchKit App-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CovidTracker WatchKit App-Info.plist"; sourceTree = "<group>"; };
+		237F9B8DA665C5C376BE5283D8AEF64F /* YOChartImageKit-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YOChartImageKit-iOS-prefix.pch"; sourceTree = "<group>"; };
+		247A6B0C557A536ACBE2934D05D963AA /* YOChartImageKit-watchOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "YOChartImageKit-watchOS-Info.plist"; path = "../YOChartImageKit-watchOS/YOChartImageKit-watchOS-Info.plist"; sourceTree = "<group>"; };
+		28CA550B3B6A5528A57DC1416AC76922 /* Pods-CovidTracker WatchKit App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CovidTracker WatchKit App-dummy.m"; sourceTree = "<group>"; };
+		2A759EFA848E198192D6AF11F1511FCD /* Pods-CovidTracker WatchKit App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CovidTracker WatchKit App-frameworks.sh"; sourceTree = "<group>"; };
+		2C516AF2348FC22C7D46D933A2A924E4 /* YOChartImageKit-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "YOChartImageKit-watchOS.modulemap"; path = "../YOChartImageKit-watchOS/YOChartImageKit-watchOS.modulemap"; sourceTree = "<group>"; };
+		2FADB0684D6262C77D219ACEFBCF5041 /* YOChartImageKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YOChartImageKit.h; path = Source/YOChartImageKit/YOChartImageKit.h; sourceTree = "<group>"; };
+		3C145D56D74869E87F25527FF3525B48 /* Pods-CovidTracker WatchKit App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CovidTracker WatchKit App-umbrella.h"; sourceTree = "<group>"; };
+		42E4A4A4E7D0138AEC7E49535FD24F20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		456BFCE773605AA7DD4C9F601CDF19C9 /* Pods-CovidTracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CovidTracker-umbrella.h"; sourceTree = "<group>"; };
+		478627FB18210AB5FB1173776816B0E5 /* YOBarChartImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YOBarChartImage.m; path = Source/YOChartImageKit/YOBarChartImage.m; sourceTree = "<group>"; };
+		480D1109DEF3A261ECFC8FB90456E6E5 /* YOChartImageKit-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "YOChartImageKit-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		4EDBB6490B5B36C458256677B64A55E0 /* Pods-CovidTracker WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CovidTracker WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5636E4F4C5F8B7E337B7812BC5B445D6 /* YOChartImageKit-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YOChartImageKit-watchOS-prefix.pch"; path = "../YOChartImageKit-watchOS/YOChartImageKit-watchOS-prefix.pch"; sourceTree = "<group>"; };
+		5CD7365E7CB31704B703861DAF14C573 /* YOBarChartImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YOBarChartImage.h; path = Source/YOChartImageKit/YOBarChartImage.h; sourceTree = "<group>"; };
+		5EB5F0ABD0271B55F4F48C155FE2D2DA /* YODonutChartImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YODonutChartImage.m; path = Source/YOChartImageKit/YODonutChartImage.m; sourceTree = "<group>"; };
+		6D7D340E15128BEDEEE204B63E666248 /* Pods-CovidTracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CovidTracker-dummy.m"; sourceTree = "<group>"; };
+		7285DFE9A3DE840A08573357836DF672 /* Pods-CovidTracker WatchKit Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CovidTracker WatchKit Extension-umbrella.h"; sourceTree = "<group>"; };
+		76B722EBDF670748A8C9835BC1064C2D /* YOChartImageKit-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "YOChartImageKit-watchOS.release.xcconfig"; path = "../YOChartImageKit-watchOS/YOChartImageKit-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		776FBF0DEDBBE43B782B590D362F8CD0 /* YOChartImageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YOChartImageKit.framework; path = "YOChartImageKit-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77DC52241D9DDE455CE17C301B0993B7 /* Pods-CovidTracker WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CovidTracker WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7B379C4868B4F992D3113314EB5B2531 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7EAF62DAE054DDFFC756E6EDDB7A2D9F /* YOChartImageKit-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "YOChartImageKit-watchOS-dummy.m"; path = "../YOChartImageKit-watchOS/YOChartImageKit-watchOS-dummy.m"; sourceTree = "<group>"; };
+		8080BECA1C40FB7CF65CFE654DD3AC91 /* Pods-CovidTracker WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CovidTracker WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
+		838E5F477A47E72D1D5CA2375A792E86 /* YOChartImageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YOChartImageKit.framework; path = "YOChartImageKit-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C3BB27C352E333CBADA00FD3FC9E2F0 /* Pods_CovidTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CovidTracker.framework; path = "Pods-CovidTracker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C945062198D020C7DA2BFA4170C1112 /* Pods-CovidTracker WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CovidTracker WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E03199ADF21C5907494B575932DCB02 /* YODonutChartImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YODonutChartImage.h; path = Source/YOChartImageKit/YODonutChartImage.h; sourceTree = "<group>"; };
+		A3D04D71F42C07252BE546688C7B56E5 /* YOLineChartImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YOLineChartImage.h; path = Source/YOChartImageKit/YOLineChartImage.h; sourceTree = "<group>"; };
+		A4A933C0666162F16C34E925F6AB932C /* Pods-CovidTracker WatchKit Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CovidTracker WatchKit Extension.modulemap"; sourceTree = "<group>"; };
+		A57BD78C055F920659F224FC101FFE9C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		A62929ED4BAFC4B7216D0029074F59BB /* YOChartImageKit-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "YOChartImageKit-iOS.modulemap"; sourceTree = "<group>"; };
+		AEE79EE0B1CBDB6BD842B5859F215618 /* Pods-CovidTracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CovidTracker.modulemap"; sourceTree = "<group>"; };
+		B6853E83466402B9AFC7C95C5150838D /* YOChartImageKit-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "YOChartImageKit-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BCB2F55DE3828BD73A65EB710D6C77F5 /* YOChartImageKit-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "YOChartImageKit-watchOS.debug.xcconfig"; path = "../YOChartImageKit-watchOS/YOChartImageKit-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BDF2F7523DB4E246C640EA1BCCE0BD34 /* Pods-CovidTracker WatchKit App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CovidTracker WatchKit App-acknowledgements.plist"; sourceTree = "<group>"; };
+		C15801F5E22C29F2A535F209A303CBC7 /* YOLineChartImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YOLineChartImage.m; path = Source/YOChartImageKit/YOLineChartImage.m; sourceTree = "<group>"; };
+		C48FC995839A33B3FD8CBC09A779F2E6 /* Pods-CovidTracker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CovidTracker-Info.plist"; sourceTree = "<group>"; };
+		C5FB9574E199C7E551D9F5FB0A53F249 /* Pods-CovidTracker WatchKit App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CovidTracker WatchKit App.modulemap"; sourceTree = "<group>"; };
+		CA2EFAA596C22BA9304FEFED6BB4B468 /* Pods-CovidTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CovidTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		CB7703841C4EE88298B15219D2575C98 /* Pods-CovidTracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CovidTracker-acknowledgements.plist"; sourceTree = "<group>"; };
+		CEAC302B6C4C7E2FA6807F28680605A8 /* YOChartImageKit-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YOChartImageKit-watchOS-umbrella.h"; path = "../YOChartImageKit-watchOS/YOChartImageKit-watchOS-umbrella.h"; sourceTree = "<group>"; };
+		D845E544D0573A4914DE1A78A76AE90D /* Pods-CovidTracker WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CovidTracker WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		D877D2A27394A615438BBAD02D8EF297 /* YOChartImageKit-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YOChartImageKit-iOS-Info.plist"; sourceTree = "<group>"; };
+		DD5086AA25125A59EA3C3353EF35D7A0 /* Pods-CovidTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CovidTracker.release.xcconfig"; sourceTree = "<group>"; };
+		E5F79535FA815BDF3815852CF99752A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EB6E66761709E048875C6CC9AD21CF7C /* YOChartImageKit-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YOChartImageKit-iOS-umbrella.h"; sourceTree = "<group>"; };
+		F343ADC903D2F09CC2DC12E72BB1D276 /* Pods_CovidTracker_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CovidTracker_WatchKit_Extension.framework; path = "Pods-CovidTracker WatchKit Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BE0277D355E3A60C0A0C594735BAEB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5919B827BF2C855A0B3415217564402B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86088D1521E1AFF90FB0713F6FA7E161 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D267B13F227241D3581D6C8509265BEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		941CC255E9856AF729FF7AE190889D46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76260FB208FC0E86A6FC6AE15416B399 /* Foundation.framework in Frameworks */,
+				852A47EF575B804AB9634D3388D8F67B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D2A7F45B085410C7EFDC7791E341D94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD68402A2258213416DE3F9B703558A /* Foundation.framework in Frameworks */,
+				0C1BDD653E804A80B7183293B410EEE0 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6240B2E17EFBA7FDCB816DB76CDDF5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CBCA7C5563D6B47AB6D475617F0BA8E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03F9246DB9D8EFAF4BD5BECEEB32A776 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				42E4A4A4E7D0138AEC7E49535FD24F20 /* Foundation.framework */,
+				A57BD78C055F920659F224FC101FFE9C /* UIKit.framework */,
+			);
+			name = watchOS;
+			sourceTree = "<group>";
+		};
+		29C94404CE2FCF58D4F3E00BBA38D854 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F91774DC1257412FBA2C1B95E7B5BB1 /* Pods-CovidTracker */,
+				31191E7559375A02D8087C1350EF5307 /* Pods-CovidTracker WatchKit App */,
+				B09D304ED4A7653F97DC70CDC23E04A9 /* Pods-CovidTracker WatchKit Extension */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		31191E7559375A02D8087C1350EF5307 /* Pods-CovidTracker WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				C5FB9574E199C7E551D9F5FB0A53F249 /* Pods-CovidTracker WatchKit App.modulemap */,
+				4EDBB6490B5B36C458256677B64A55E0 /* Pods-CovidTracker WatchKit App-acknowledgements.markdown */,
+				BDF2F7523DB4E246C640EA1BCCE0BD34 /* Pods-CovidTracker WatchKit App-acknowledgements.plist */,
+				28CA550B3B6A5528A57DC1416AC76922 /* Pods-CovidTracker WatchKit App-dummy.m */,
+				2A759EFA848E198192D6AF11F1511FCD /* Pods-CovidTracker WatchKit App-frameworks.sh */,
+				21DE0C1AA6C5EAD70466C49F25F29B62 /* Pods-CovidTracker WatchKit App-Info.plist */,
+				3C145D56D74869E87F25527FF3525B48 /* Pods-CovidTracker WatchKit App-umbrella.h */,
+				D845E544D0573A4914DE1A78A76AE90D /* Pods-CovidTracker WatchKit App.debug.xcconfig */,
+				8C945062198D020C7DA2BFA4170C1112 /* Pods-CovidTracker WatchKit App.release.xcconfig */,
+			);
+			name = "Pods-CovidTracker WatchKit App";
+			path = "Target Support Files/Pods-CovidTracker WatchKit App";
+			sourceTree = "<group>";
+		};
+		4F91774DC1257412FBA2C1B95E7B5BB1 /* Pods-CovidTracker */ = {
+			isa = PBXGroup;
+			children = (
+				AEE79EE0B1CBDB6BD842B5859F215618 /* Pods-CovidTracker.modulemap */,
+				0CB236F1392A943BDD2392CFA3BE03BF /* Pods-CovidTracker-acknowledgements.markdown */,
+				CB7703841C4EE88298B15219D2575C98 /* Pods-CovidTracker-acknowledgements.plist */,
+				6D7D340E15128BEDEEE204B63E666248 /* Pods-CovidTracker-dummy.m */,
+				07503C02BD49ECA9D32FD314D509F77B /* Pods-CovidTracker-frameworks.sh */,
+				C48FC995839A33B3FD8CBC09A779F2E6 /* Pods-CovidTracker-Info.plist */,
+				456BFCE773605AA7DD4C9F601CDF19C9 /* Pods-CovidTracker-umbrella.h */,
+				CA2EFAA596C22BA9304FEFED6BB4B468 /* Pods-CovidTracker.debug.xcconfig */,
+				DD5086AA25125A59EA3C3353EF35D7A0 /* Pods-CovidTracker.release.xcconfig */,
+			);
+			name = "Pods-CovidTracker";
+			path = "Target Support Files/Pods-CovidTracker";
+			sourceTree = "<group>";
+		};
+		71566947CD5C99A39A4A0263D344E4A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE07F3BD1C57603CCFB3D26D58D43160 /* YOChartImageKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		90BC0D0E22EEA2D13A241BBB3DB92B30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C3BB27C352E333CBADA00FD3FC9E2F0 /* Pods_CovidTracker.framework */,
+				05A321A020AD0D8501498B4AD2FD0A76 /* Pods_CovidTracker_WatchKit_App.framework */,
+				F343ADC903D2F09CC2DC12E72BB1D276 /* Pods_CovidTracker_WatchKit_Extension.framework */,
+				776FBF0DEDBBE43B782B590D362F8CD0 /* YOChartImageKit.framework */,
+				838E5F477A47E72D1D5CA2375A792E86 /* YOChartImageKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE07F3BD1C57603CCFB3D26D58D43160 /* YOChartImageKit */ = {
+			isa = PBXGroup;
+			children = (
+				5CD7365E7CB31704B703861DAF14C573 /* YOBarChartImage.h */,
+				478627FB18210AB5FB1173776816B0E5 /* YOBarChartImage.m */,
+				2FADB0684D6262C77D219ACEFBCF5041 /* YOChartImageKit.h */,
+				9E03199ADF21C5907494B575932DCB02 /* YODonutChartImage.h */,
+				5EB5F0ABD0271B55F4F48C155FE2D2DA /* YODonutChartImage.m */,
+				A3D04D71F42C07252BE546688C7B56E5 /* YOLineChartImage.h */,
+				C15801F5E22C29F2A535F209A303CBC7 /* YOLineChartImage.m */,
+				B8A0ADEB8938441F5803CC9568719F37 /* Support Files */,
+			);
+			name = YOChartImageKit;
+			path = YOChartImageKit;
+			sourceTree = "<group>";
+		};
+		B09D304ED4A7653F97DC70CDC23E04A9 /* Pods-CovidTracker WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A4A933C0666162F16C34E925F6AB932C /* Pods-CovidTracker WatchKit Extension.modulemap */,
+				77DC52241D9DDE455CE17C301B0993B7 /* Pods-CovidTracker WatchKit Extension-acknowledgements.markdown */,
+				02D47C4B8C503EF406260BB566179AC3 /* Pods-CovidTracker WatchKit Extension-acknowledgements.plist */,
+				8080BECA1C40FB7CF65CFE654DD3AC91 /* Pods-CovidTracker WatchKit Extension-dummy.m */,
+				035DD78181C3EA5B4F8F7A64DBAB7F6C /* Pods-CovidTracker WatchKit Extension-frameworks.sh */,
+				21D9BC57D443177DAB3E2EE5A6B65293 /* Pods-CovidTracker WatchKit Extension-Info.plist */,
+				7285DFE9A3DE840A08573357836DF672 /* Pods-CovidTracker WatchKit Extension-umbrella.h */,
+				1BD1882A5CB3BCA65AA9CA209547CD06 /* Pods-CovidTracker WatchKit Extension.debug.xcconfig */,
+				0550FFA2C6E33004A205A09F05865AEC /* Pods-CovidTracker WatchKit Extension.release.xcconfig */,
+			);
+			name = "Pods-CovidTracker WatchKit Extension";
+			path = "Target Support Files/Pods-CovidTracker WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		B8A0ADEB8938441F5803CC9568719F37 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A62929ED4BAFC4B7216D0029074F59BB /* YOChartImageKit-iOS.modulemap */,
+				15229BC3E36149253830291BBC1D62EC /* YOChartImageKit-iOS-dummy.m */,
+				D877D2A27394A615438BBAD02D8EF297 /* YOChartImageKit-iOS-Info.plist */,
+				237F9B8DA665C5C376BE5283D8AEF64F /* YOChartImageKit-iOS-prefix.pch */,
+				EB6E66761709E048875C6CC9AD21CF7C /* YOChartImageKit-iOS-umbrella.h */,
+				B6853E83466402B9AFC7C95C5150838D /* YOChartImageKit-iOS.debug.xcconfig */,
+				480D1109DEF3A261ECFC8FB90456E6E5 /* YOChartImageKit-iOS.release.xcconfig */,
+				2C516AF2348FC22C7D46D933A2A924E4 /* YOChartImageKit-watchOS.modulemap */,
+				7EAF62DAE054DDFFC756E6EDDB7A2D9F /* YOChartImageKit-watchOS-dummy.m */,
+				247A6B0C557A536ACBE2934D05D963AA /* YOChartImageKit-watchOS-Info.plist */,
+				5636E4F4C5F8B7E337B7812BC5B445D6 /* YOChartImageKit-watchOS-prefix.pch */,
+				CEAC302B6C4C7E2FA6807F28680605A8 /* YOChartImageKit-watchOS-umbrella.h */,
+				BCB2F55DE3828BD73A65EB710D6C77F5 /* YOChartImageKit-watchOS.debug.xcconfig */,
+				76B722EBDF670748A8C9835BC1064C2D /* YOChartImageKit-watchOS.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/YOChartImageKit-iOS";
+			sourceTree = "<group>";
+		};
+		B9C9404F41D9344FF5ACAD03667B4827 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E5F79535FA815BDF3815852CF99752A5 /* Foundation.framework */,
+				7B379C4868B4F992D3113314EB5B2531 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				DE987B428FA3D231AF1EF6088D8E9999 /* Frameworks */,
+				71566947CD5C99A39A4A0263D344E4A5 /* Pods */,
+				90BC0D0E22EEA2D13A241BBB3DB92B30 /* Products */,
+				29C94404CE2FCF58D4F3E00BBA38D854 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		DE987B428FA3D231AF1EF6088D8E9999 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9C9404F41D9344FF5ACAD03667B4827 /* iOS */,
+				03F9246DB9D8EFAF4BD5BECEEB32A776 /* watchOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2876BBE96F686A1782A483DDFDBFCD69 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1DD49B109EDE5B10641BD91BE32BDE6 /* Pods-CovidTracker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E0B38CBFDB0211E259D4869677D0EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				142830721F0E39C933CFB24B936047A0 /* YOBarChartImage.h in Headers */,
+				3E423354CBDDA6BCEAB3DE74E3DE5518 /* YOChartImageKit-watchOS-umbrella.h in Headers */,
+				4CF49B438EC19A45A5ECDA64D90510BD /* YOChartImageKit.h in Headers */,
+				D1D247C6A61663C2CC3EE152CE128CFC /* YODonutChartImage.h in Headers */,
+				DEB3508014D1078027181A6DC4D6B9A7 /* YOLineChartImage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94355F5107936F469E911D0DF2B08551 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D969A85A35A254855F6AA890976FA940 /* YOBarChartImage.h in Headers */,
+				0BE237E8470AC6DBF4930F1725216D36 /* YOChartImageKit-iOS-umbrella.h in Headers */,
+				84AFC3072180FE7559FA5D54074E86EA /* YOChartImageKit.h in Headers */,
+				5A14F34B8B4D8BE117DE15F8FF3AF710 /* YODonutChartImage.h in Headers */,
+				F6E9C35D08EA717D7E1987C6AF59EC55 /* YOLineChartImage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB99E6B58900D0C0B678FD2B376D1171 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B06F67D0740DB39310B53A966CE4F90 /* Pods-CovidTracker WatchKit App-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E558B8C5F0365FAFBB01C44A923D138B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7898D6EC6BDD95B77FC3D38B4D3679D5 /* Pods-CovidTracker WatchKit Extension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0F8DA0599E64EA7FB32EAF7B8FB1187B /* YOChartImageKit-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00DAA5577BBDE0C2BD157DF99A3E5BB9 /* Build configuration list for PBXNativeTarget "YOChartImageKit-iOS" */;
+			buildPhases = (
+				94355F5107936F469E911D0DF2B08551 /* Headers */,
+				EFD5D341CEDF6049FABD869E9446A243 /* Sources */,
+				941CC255E9856AF729FF7AE190889D46 /* Frameworks */,
+				9267DAAFA0F4ED8DF7D747A9F2F3C46F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "YOChartImageKit-iOS";
+			productName = "YOChartImageKit-iOS";
+			productReference = 776FBF0DEDBBE43B782B590D362F8CD0 /* YOChartImageKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4794D22422EA52D897FCEAA977A57B7A /* Pods-CovidTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CF5AB3851BF62F9B5E0637A5639464 /* Build configuration list for PBXNativeTarget "Pods-CovidTracker" */;
+			buildPhases = (
+				2876BBE96F686A1782A483DDFDBFCD69 /* Headers */,
+				7C9158D40E3C22146FAF950807646406 /* Sources */,
+				1BE0277D355E3A60C0A0C594735BAEB1 /* Frameworks */,
+				B9C270D8EAF95A503C580DE4C821A8AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F009551465F529649DC9DEF457B5590 /* PBXTargetDependency */,
+			);
+			name = "Pods-CovidTracker";
+			productName = "Pods-CovidTracker";
+			productReference = 8C3BB27C352E333CBADA00FD3FC9E2F0 /* Pods_CovidTracker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		49BB978FDAA81BB3D8B7EC7B7A24E802 /* Pods-CovidTracker WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72A6F272CD7C0D07FDD15603D77F8791 /* Build configuration list for PBXNativeTarget "Pods-CovidTracker WatchKit Extension" */;
+			buildPhases = (
+				E558B8C5F0365FAFBB01C44A923D138B /* Headers */,
+				6FD28B3256506EDD1E6A23C2A9610F97 /* Sources */,
+				86088D1521E1AFF90FB0713F6FA7E161 /* Frameworks */,
+				9B0BFC12C41DE8FEB6E7E2ED52CA3752 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				421CDDF7D7365E720DCBC029E4C4184F /* PBXTargetDependency */,
+			);
+			name = "Pods-CovidTracker WatchKit Extension";
+			productName = "Pods-CovidTracker WatchKit Extension";
+			productReference = F343ADC903D2F09CC2DC12E72BB1D276 /* Pods_CovidTracker_WatchKit_Extension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CEE2E5AFC9DA04DC4C0F54B2AD71E224 /* Pods-CovidTracker WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A79FC6D8C8F1D9FB5FC5460D4CC99CAE /* Build configuration list for PBXNativeTarget "Pods-CovidTracker WatchKit App" */;
+			buildPhases = (
+				AB99E6B58900D0C0B678FD2B376D1171 /* Headers */,
+				52956B8B373BFC69BF865FCA3427A4DD /* Sources */,
+				F6240B2E17EFBA7FDCB816DB76CDDF5D /* Frameworks */,
+				CE2360B61026DF5631722FF6B3785962 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				245B1FC867E5534D11E753470A36D30E /* PBXTargetDependency */,
+			);
+			name = "Pods-CovidTracker WatchKit App";
+			productName = "Pods-CovidTracker WatchKit App";
+			productReference = 05A321A020AD0D8501498B4AD2FD0A76 /* Pods_CovidTracker_WatchKit_App.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FD0B034C062E72EAE082B1B8DF0DA22A /* YOChartImageKit-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 995362BE7970870B067383A2F8FEC281 /* Build configuration list for PBXNativeTarget "YOChartImageKit-watchOS" */;
+			buildPhases = (
+				28E0B38CBFDB0211E259D4869677D0EC /* Headers */,
+				26B09EF5FFDE0B721DB0A05BF382F7C7 /* Sources */,
+				9D2A7F45B085410C7EFDC7791E341D94 /* Frameworks */,
+				FE166043901C7062DB23DB816928DBEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "YOChartImageKit-watchOS";
+			productName = "YOChartImageKit-watchOS";
+			productReference = 838E5F477A47E72D1D5CA2375A792E86 /* YOChartImageKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 90BC0D0E22EEA2D13A241BBB3DB92B30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4794D22422EA52D897FCEAA977A57B7A /* Pods-CovidTracker */,
+				CEE2E5AFC9DA04DC4C0F54B2AD71E224 /* Pods-CovidTracker WatchKit App */,
+				49BB978FDAA81BB3D8B7EC7B7A24E802 /* Pods-CovidTracker WatchKit Extension */,
+				0F8DA0599E64EA7FB32EAF7B8FB1187B /* YOChartImageKit-iOS */,
+				FD0B034C062E72EAE082B1B8DF0DA22A /* YOChartImageKit-watchOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9267DAAFA0F4ED8DF7D747A9F2F3C46F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B0BFC12C41DE8FEB6E7E2ED52CA3752 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9C270D8EAF95A503C580DE4C821A8AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE2360B61026DF5631722FF6B3785962 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE166043901C7062DB23DB816928DBEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26B09EF5FFDE0B721DB0A05BF382F7C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4C814C1083487B17A735CD187CFC8FF /* YOBarChartImage.m in Sources */,
+				393E0F8B904E4E570365262E96A4765D /* YOChartImageKit-watchOS-dummy.m in Sources */,
+				3BA3497D29D1F671F2EF658B77C2F164 /* YODonutChartImage.m in Sources */,
+				FA5F64756470DC1DB2826517436B0492 /* YOLineChartImage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52956B8B373BFC69BF865FCA3427A4DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77548E6C84FF74166152D70FA5C70A73 /* Pods-CovidTracker WatchKit App-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD28B3256506EDD1E6A23C2A9610F97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				569C13BC7D4345F89D3754D07D072095 /* Pods-CovidTracker WatchKit Extension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C9158D40E3C22146FAF950807646406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				302C3FAA24BD7B35095C4CEBB1124518 /* Pods-CovidTracker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD5D341CEDF6049FABD869E9446A243 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD225D6E8DB8378876ECABCE9846965F /* YOBarChartImage.m in Sources */,
+				BC22CE53779F2796C825BC347522947D /* YOChartImageKit-iOS-dummy.m in Sources */,
+				BFB1575BC21BB210140CD196156B4A8F /* YODonutChartImage.m in Sources */,
+				A585431FC8F5FBF7E873D64BD1AC794C /* YOLineChartImage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		245B1FC867E5534D11E753470A36D30E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "YOChartImageKit-iOS";
+			target = 0F8DA0599E64EA7FB32EAF7B8FB1187B /* YOChartImageKit-iOS */;
+			targetProxy = 0293572402DD445532B0E7D8E5101960 /* PBXContainerItemProxy */;
+		};
+		421CDDF7D7365E720DCBC029E4C4184F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "YOChartImageKit-watchOS";
+			target = FD0B034C062E72EAE082B1B8DF0DA22A /* YOChartImageKit-watchOS */;
+			targetProxy = 6AF12276F4E1060342720B960EF2A101 /* PBXContainerItemProxy */;
+		};
+		6F009551465F529649DC9DEF457B5590 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "YOChartImageKit-iOS";
+			target = 0F8DA0599E64EA7FB32EAF7B8FB1187B /* YOChartImageKit-iOS */;
+			targetProxy = 447EB2662EDD01D8E76611BEFD3EF6E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0BE92385434064753494702485F41723 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6853E83466402B9AFC7C95C5150838D /* YOChartImageKit-iOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YOChartImageKit-iOS/YOChartImageKit-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YOChartImageKit-iOS/YOChartImageKit-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YOChartImageKit-iOS/YOChartImageKit-iOS.modulemap";
+				PRODUCT_MODULE_NAME = YOChartImageKit;
+				PRODUCT_NAME = YOChartImageKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		14344E8CA215606A0EE6C3B7F8D92414 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA2EFAA596C22BA9304FEFED6BB4B468 /* Pods-CovidTracker.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CovidTracker/Pods-CovidTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CovidTracker/Pods-CovidTracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		29F68654DC9808A14846079FB67289B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		44FB7C2E24397994DF20BDB8D1575099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76B722EBDF670748A8C9835BC1064C2D /* YOChartImageKit-watchOS.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YOChartImageKit-watchOS/YOChartImageKit-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YOChartImageKit-watchOS/YOChartImageKit-watchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YOChartImageKit-watchOS/YOChartImageKit-watchOS.modulemap";
+				PRODUCT_MODULE_NAME = YOChartImageKit;
+				PRODUCT_NAME = YOChartImageKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		6B481239005E0CA3CC08BEE07716A1CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD5086AA25125A59EA3C3353EF35D7A0 /* Pods-CovidTracker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CovidTracker/Pods-CovidTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CovidTracker/Pods-CovidTracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8C4A8CC0905BDE30C91DF0EBA8BB7F63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		B301086CCAB1DEF0B8B3FF517F576DC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 480D1109DEF3A261ECFC8FB90456E6E5 /* YOChartImageKit-iOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YOChartImageKit-iOS/YOChartImageKit-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YOChartImageKit-iOS/YOChartImageKit-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YOChartImageKit-iOS/YOChartImageKit-iOS.modulemap";
+				PRODUCT_MODULE_NAME = YOChartImageKit;
+				PRODUCT_NAME = YOChartImageKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B46B4B6F00A283AFBFF64CE9C991E254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C945062198D020C7DA2BFA4170C1112 /* Pods-CovidTracker WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CovidTracker WatchKit App/Pods-CovidTracker WatchKit App-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CovidTracker WatchKit App/Pods-CovidTracker WatchKit App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CFA481E3D6889A04E4035B4196831F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D845E544D0573A4914DE1A78A76AE90D /* Pods-CovidTracker WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CovidTracker WatchKit App/Pods-CovidTracker WatchKit App-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CovidTracker WatchKit App/Pods-CovidTracker WatchKit App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E630A170B0E02B5D480EB17D9690C7A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BD1882A5CB3BCA65AA9CA209547CD06 /* Pods-CovidTracker WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CovidTracker WatchKit Extension/Pods-CovidTracker WatchKit Extension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CovidTracker WatchKit Extension/Pods-CovidTracker WatchKit Extension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		EB7C37EECFC02B9EC65D97BF7C6F6456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCB2F55DE3828BD73A65EB710D6C77F5 /* YOChartImageKit-watchOS.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YOChartImageKit-watchOS/YOChartImageKit-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YOChartImageKit-watchOS/YOChartImageKit-watchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YOChartImageKit-watchOS/YOChartImageKit-watchOS.modulemap";
+				PRODUCT_MODULE_NAME = YOChartImageKit;
+				PRODUCT_NAME = YOChartImageKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		F2E32494FA4B0C5A3CAB6F7F6688F090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0550FFA2C6E33004A205A09F05865AEC /* Pods-CovidTracker WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CovidTracker WatchKit Extension/Pods-CovidTracker WatchKit Extension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CovidTracker WatchKit Extension/Pods-CovidTracker WatchKit Extension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00DAA5577BBDE0C2BD157DF99A3E5BB9 /* Build configuration list for PBXNativeTarget "YOChartImageKit-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BE92385434064753494702485F41723 /* Debug */,
+				B301086CCAB1DEF0B8B3FF517F576DC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29F68654DC9808A14846079FB67289B7 /* Debug */,
+				8C4A8CC0905BDE30C91DF0EBA8BB7F63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72A6F272CD7C0D07FDD15603D77F8791 /* Build configuration list for PBXNativeTarget "Pods-CovidTracker WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E630A170B0E02B5D480EB17D9690C7A2 /* Debug */,
+				F2E32494FA4B0C5A3CAB6F7F6688F090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96CF5AB3851BF62F9B5E0637A5639464 /* Build configuration list for PBXNativeTarget "Pods-CovidTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14344E8CA215606A0EE6C3B7F8D92414 /* Debug */,
+				6B481239005E0CA3CC08BEE07716A1CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		995362BE7970870B067383A2F8FEC281 /* Build configuration list for PBXNativeTarget "YOChartImageKit-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB7C37EECFC02B9EC65D97BF7C6F6456 /* Debug */,
+				44FB7C2E24397994DF20BDB8D1575099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A79FC6D8C8F1D9FB5FC5460D4CC99CAE /* Build configuration list for PBXNativeTarget "Pods-CovidTracker WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFA481E3D6889A04E4035B4196831F43 /* Debug */,
+				B46B4B6F00A283AFBFF64CE9C991E254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

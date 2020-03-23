@@ -31,11 +31,11 @@ struct Location: Identifiable {
  
 struct ContentView: View {
     @State var positive = 0
-    @State var state = "NY"
     @State var death = 0
     @State var negative = 0
  
     @ObservedObject var locationManager = LocationManager()
+    @ObservedObject var covidTracker = CovidTrackerAPI()
     
     var userLatitude: String {
         return "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
@@ -45,10 +45,22 @@ struct ContentView: View {
         return "\(locationManager.lastLocation?.coordinate.longitude ?? 0)"
     }
     
+    var stateInfo: USState? {
+        return covidTracker.stateInfo
+    }
+    
+    var state: String {
+        guard let placeMarkInfo = locationManager.plasceMark else { return "" }
+        //updateUI(placeInfo: placeMarkInfo)
+        return placeMarkInfo.administrativeArea ?? ""
+       }
+    
     
     var body: some View {
         
         VStack(alignment: .leading, spacing: 2){
+  
+            
             Text("Covid19 Tracker: \(state)")
                 .font(.caption)
                 .lineLimit(nil)
@@ -56,50 +68,26 @@ struct ContentView: View {
             Text("Cases Positive")
                 .font(.footnote)
                 .foregroundColor(.gray)
-            Text("\(positive)")
+            Text("\(stateInfo?.positive ?? 0)")
                 .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
             Text("Death")
                 .font(.footnote)
                 .foregroundColor(.gray)
-            Text("\(death)")
+            Text("\(stateInfo?.death ?? 0)")
                 .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
-            Text("Total")
+            Text("Negative")
                 .font(.footnote)
                 .foregroundColor(.gray)
-            Text("\(negative)")
+            Text("\(stateInfo?.negative ?? 0)")
                 .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
-            HStack {
-                           Text("latitude: \(userLatitude)")
-                           Text("longitude: \(userLongitude)")
-                       }
-            chart()
-        }.padding()
-        .onAppear() {
-             self.updateUI()
-        }
-    }
-     
-    func updateUI() {
-        CovidTrackerAPI.shared.fetchState(from: .currentStates) { (result) in
-            
-            switch result {
-            case .success(let states):
-                guard let currentState = states.filter({ $0.state == self.state }).first else { return }
-                
-                guard let positive = currentState.positive,
-                    let death = currentState.death,
-                    let negative = currentState.negative
-                    else{ return }
-                self.positive = positive
-                self.death = death
-                self.negative = negative
-                //print(currentState)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-    }
     
+            chart()
+        }.padding().onAppear(){
+            self.covidTracker.fetchStateApi()
+        }
+      
+    
+    } 
 
 }
 
