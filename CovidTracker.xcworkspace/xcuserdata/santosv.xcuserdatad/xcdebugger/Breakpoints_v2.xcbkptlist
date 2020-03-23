@@ -3,4 +3,118 @@
    uuid = "F2C3BB39-B97E-4AA4-ABF4-595523D39D82"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4F752ACD-56AA-4695-8D7A-CF5147C63CA2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CovidTracker WatchKit Extension/RemoteImageURL.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "init(imageURL:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4F752ACD-56AA-4695-8D7A-CF5147C63CA2 - 85f53810ad2f6442"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CovidTracker_WatchKit_Extension.RemoteImageURL.init(imageURL: Swift.String) -&gt; CovidTracker_WatchKit_Extension.RemoteImageURL"
+                  moduleName = "CovidTracker WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/santosv/Documents/iphoneDev/CovidTracker/CovidTracker%20WatchKit%20Extension/RemoteImageURL.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "363">
+               </Location>
+               <Location
+                  uuid = "4F752ACD-56AA-4695-8D7A-CF5147C63CA2 - 72a29d42bfbb26ef"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CovidTracker_WatchKit_Extension.RemoteImageURL.init(imageURL: Swift.String) -&gt; CovidTracker_WatchKit_Extension.RemoteImageURL"
+                  moduleName = "CovidTracker WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/santosv/Documents/iphoneDev/CovidTracker/CovidTracker%20WatchKit%20Extension/RemoteImageURL.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "58">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E731C4BD-5A91-487B-AFE2-59AF6C8DB03C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CovidTracker WatchKit Extension/RemoteImageURL.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "init(imageURL:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E731C4BD-5A91-487B-AFE2-59AF6C8DB03C - 8921971bf84a0a5f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CovidTracker_WatchKit_Extension.RemoteImageURL.init(imageURL: Swift.String) -&gt; CovidTracker_WatchKit_Extension.RemoteImageURL"
+                  moduleName = "CovidTracker WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/santosv/Documents/iphoneDev/CovidTracker/CovidTracker%20WatchKit%20Extension/RemoteImageURL.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "772">
+               </Location>
+               <Location
+                  uuid = "E731C4BD-5A91-487B-AFE2-59AF6C8DB03C - 85f53810ad2f6442"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CovidTracker_WatchKit_Extension.RemoteImageURL.init(imageURL: Swift.String) -&gt; CovidTracker_WatchKit_Extension.RemoteImageURL"
+                  moduleName = "CovidTracker WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/santosv/Documents/iphoneDev/CovidTracker/CovidTracker%20WatchKit%20Extension/RemoteImageURL.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "240">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AA3F1FDE-785E-4F92-925F-118F7FC83199"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CovidTracker WatchKit Extension/RemoteImageURL.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "init(imageURL:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

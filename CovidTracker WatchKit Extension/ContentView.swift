@@ -61,7 +61,6 @@ struct ContentView: View {
     var body: some View {
         
         VStack(alignment: .leading, spacing: 2){
-            
             Text("Covid19 Tracker: \(usState)")
                 .font(.caption)
                 .lineLimit(nil)
@@ -83,9 +82,7 @@ struct ContentView: View {
                 .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
     
             chart()
-        }.padding().onAppear(){
-           // self.covidTracker.fetchStateApi(state: self.usState)
-        }
+        }.padding().background(ImageViewContainer(imageURL: "https://source.unsplash.com/1600x900/?quarantine,ny").opacity(0.3))
       
     
     } 
