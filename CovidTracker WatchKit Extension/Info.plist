@@ -33,11 +33,11 @@
 		<string>com.apple.watchkit</string>
 	</dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Application requires user’s location for better user experience.</string>
+	<string>Show your state covid-19 cases based on your current location</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Application requires user’s location for better user experience.</string>
+	<string>Show your state covid-19 cases based on your current location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Application requires user’s location for better user experience.</string>
+	<string>Show your state covid-19 cases based on your current location</string>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
 	<key>WKWatchOnly</key>
