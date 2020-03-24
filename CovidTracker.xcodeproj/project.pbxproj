@@ -632,6 +632,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"CovidTracker WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = HDYHZ227JK;
 				ENABLE_PREVIEWS = YES;
@@ -657,6 +658,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"CovidTracker WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = HDYHZ227JK;
 				ENABLE_PREVIEWS = YES;
@@ -684,7 +686,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HDYHZ227JK;
 				IBSC_MODULE = CovidTracker_WatchKit_Extension;
 				INFOPLIST_FILE = "CovidTracker WatchKit App/Info.plist";
@@ -712,7 +714,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HDYHZ227JK;
 				IBSC_MODULE = CovidTracker_WatchKit_Extension;
 				INFOPLIST_FILE = "CovidTracker WatchKit App/Info.plist";
@@ -737,7 +739,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HDYHZ227JK;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -758,7 +760,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HDYHZ227JK;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
