@@ -81,7 +81,7 @@ extension LocationManager: CLLocationManagerDelegate {
         guard let loc = self.locationManager.location else { return }
         
         getPlace(for: loc) { (placemark) in
-            
+             
             self.plasceMark = placemark
         }
         
