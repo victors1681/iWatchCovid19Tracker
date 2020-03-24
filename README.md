@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/victors1681/iWatchCovid19Tracker/master/github/app-landing.png" height="400px"></br>
+<img src="https://raw.githubusercontent.com/victors1681/iWatchCovid19Tracker/master/github/app-landing.jpg" height="400px"></br>
 
 [![license](https://img.shields.io/badge/license-Apache_2.0-red.svg?style=for-the-badge)]() 
 <br/>
