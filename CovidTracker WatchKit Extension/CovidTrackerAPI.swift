@@ -10,76 +10,76 @@ import UIKit
 import Combine
 
 public enum APIServiceError: Error {
-      case apiError
-      case invalidEndpoint
-      case invalidResponse
-      case noData
-      case decodeError
-  }
-  
-  public struct USState: Codable {
-      
-      public let state: String?
-      public let positive: Int?
-      public let positiveScore: Int?
-      public let negativeScore: Int?
-      public let negativeRegularScore: Int?
-      public let commercialScore: Int?
-      public let grade: String?
-      public let score: Int?
-      public let negative: Int?
-      public let pending: Int?
-      public let hospitalized: Int?
-      public let death: Int?
-      public let total: Int?
-      public let lastUpdateEt: String?
-      public let checkTimeEt: String?
-      public let dateModified: String?
-      public let dateChecked: String?
-  }
-  
-  public struct StateDaily: Codable {
-      public let date: Int?
-      public let state: String?
-      public let positive: Int?
-      public let negative: Int?
-      public let pending: Int?
-      public let hospitalized: Int?
-      public let death: Int?
-      public let total: Int?
-      public let dateChecked: String?
-  }
-  
-  public struct StateInfo: Codable {
-      public let state: String?
-      public let covid19SiteOld: String?
-      public let covid19Site: String?
-      public let covid19SiteSecondary: String?
-      public let twitter: String?
-      public let pui: String?
-      public let pum: Bool?
-      public let notes: String?
-      public let name: String?
-  }
-  
-  public struct USCurrent: Codable {
-        public let positive: Int?
-        public let negative: Int?
-        public let posNeg: Int?
-        public let hospitalized: Int?
-        public let death: Int?
-        public let total: Int?
-    }
-  
-  public struct Counties: Codable {
-      public let state: String?
-      public let county: String?
-      public let covid19Site: String?
-      public let dataSite: String?
-      public let mainSite: String?
-      public let twitter: String?
-      public let pui: String?
-  }
+    case apiError
+    case invalidEndpoint
+    case invalidResponse
+    case noData
+    case decodeError
+}
+
+public struct USState: Codable {
+    
+    public let state: String?
+    public let positive: Int?
+    public let positiveScore: Int?
+    public let negativeScore: Int?
+    public let negativeRegularScore: Int?
+    public let commercialScore: Int?
+    public let grade: String?
+    public let score: Int?
+    public let negative: Int?
+    public let pending: Int?
+    public let hospitalized: Int?
+    public let death: Int?
+    public let total: Int?
+    public let lastUpdateEt: String?
+    public let checkTimeEt: String?
+    public let dateModified: String?
+    public let dateChecked: String?
+}
+
+public struct StateDaily: Codable {
+    public let date: Int?
+    public let state: String?
+    public let positive: Int?
+    public let negative: Int?
+    public let pending: Int?
+    public let hospitalized: Int?
+    public let death: Int?
+    public let total: Int?
+    public let dateChecked: String?
+}
+
+public struct StateInfo: Codable {
+    public let state: String?
+    public let covid19SiteOld: String?
+    public let covid19Site: String?
+    public let covid19SiteSecondary: String?
+    public let twitter: String?
+    public let pui: String?
+    public let pum: Bool?
+    public let notes: String?
+    public let name: String?
+}
+
+public struct USCurrent: Codable {
+    public let positive: Int?
+    public let negative: Int?
+    public let posNeg: Int?
+    public let hospitalized: Int?
+    public let death: Int?
+    public let total: Int?
+}
+
+public struct Counties: Codable {
+    public let state: String?
+    public let county: String?
+    public let covid19Site: String?
+    public let dataSite: String?
+    public let mainSite: String?
+    public let twitter: String?
+    public let pui: String?
+}
 
 
 class CovidTrackerAPI: ObservableObject {
@@ -110,16 +110,16 @@ class CovidTrackerAPI: ObservableObject {
         case counties = "counties"
         case tracker = "urls"
         case screenshots = "screenshots"
-      }
+    }
     
-  
- 
+    
+    
     @Published var stateInfo: USState? {
-         willSet {
-             objectWillChange.send()
-         }
-     }
-     
+        willSet {
+            objectWillChange.send()
+        }
+    }
+    
     @Published var usStateDialy: [StateDaily]? {
         willSet{
             objectWillChange.send()
@@ -132,44 +132,50 @@ class CovidTrackerAPI: ObservableObject {
         }
     }
     
+    @Published var usCurrent: USCurrent? {
+        willSet{
+            objectWillChange.send()
+        }
+    }
+    
     
     private func fetchResources<T: Decodable>(url: URL, completion: @escaping (Result<T, APIServiceError>) -> Void) {
         guard let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
             completion(.failure(.invalidEndpoint))
             return
         }
-      
+        
         guard let url = urlComponents.url else {
             completion(.failure(.invalidEndpoint))
             return
         }
-     
+        
         urlSession.dataTaskCustom(with: url) { (result) in
             switch result {
-                case .success(let (response, data)):
-                    guard let statusCode = (response as? HTTPURLResponse)?.statusCode, 200..<299 ~= statusCode else {
-                        completion(.failure(.invalidResponse))
-                        return
-                    }
-                    do {
-                        let values = try self.jsonDecoder.decode(T.self, from: data)
-                        completion(.success(values))
-                    } catch let err {
-                        print(err)
-                        completion(.failure(.decodeError))
-                    }
-            case .failure( _):
-                    completion(.failure(.apiError))
+            case .success(let (response, data)):
+                guard let statusCode = (response as? HTTPURLResponse)?.statusCode, 200..<299 ~= statusCode else {
+                    completion(.failure(.invalidResponse))
+                    return
                 }
-         }.resume()
+                do {
+                    let values = try self.jsonDecoder.decode(T.self, from: data)
+                    completion(.success(values))
+                } catch let err {
+                    print(err)
+                    completion(.failure(.decodeError))
+                }
+            case .failure( _):
+                completion(.failure(.apiError))
+            }
+        }.resume()
     }
     
     private func fetchState(from endpoint: Endpoint = .currentStates, result: @escaping (Result<[USState], APIServiceError>) -> Void) {
-      let trackerUrl = baseURL
-          .appendingPathComponent("api")
-          .appendingPathComponent(endpoint.rawValue)
+        let trackerUrl = baseURL
+            .appendingPathComponent("api")
+            .appendingPathComponent(endpoint.rawValue)
         print(trackerUrl)
-      fetchResources(url: trackerUrl, completion: result)
+        fetchResources(url: trackerUrl, completion: result)
     }
     
     
@@ -177,10 +183,10 @@ class CovidTrackerAPI: ObservableObject {
         let currentState = self.stateInfo?.state
         
         if(currentState == nil || currentState != state && state != ""){
-        self.fetchState(from: .currentStates) { (result) in
-                  
-                  switch result {
-                  case .success(let states):
+            self.fetchState(from: .currentStates) { (result) in
+                
+                switch result {
+                case .success(let states):
                     guard let stateLocated = states.filter({ $0.state == state }).first else { return }
                     
                     if(stateLocated.state  == nil){
@@ -188,30 +194,30 @@ class CovidTrackerAPI: ObservableObject {
                     }
                     
                     self.stateInfo = stateLocated
-                      //print(currentState)
-                  case .failure(let error):
-                      print(error.localizedDescription)
-                  }
-              }
+                //print(currentState)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
         }
     }
     
     public func fetchAllStateApi(){
-         
+        
         self.fetchState(from: .currentStates) { (result) in
-                  
-                  switch result {
-                  case .success(let states):
-                    self.stateList = states
-                      //print(currentState)
-                  case .failure(let error):
-                      print(error.localizedDescription)
-                  }
-              }
+            
+            switch result {
+            case .success(let states):
+                self.stateList = states
+            //print(currentState)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     private func fetchStateDaily(from endpoint: Endpoint = .stateDaily, state: String, result: @escaping (Result<[StateDaily], APIServiceError>) -> Void) {
-   
+        
         let query = URLQueryItem(name: "state", value: state)
         
         var urlComponents = URLComponents()
@@ -220,51 +226,64 @@ class CovidTrackerAPI: ObservableObject {
         urlComponents.path = "/api/\(endpoint.rawValue)"
         urlComponents.queryItems = [query]
         
-          print(urlComponents)
-    
-         fetchResources(url: urlComponents.url!.absoluteURL, completion: result)
-       }
+        print(urlComponents)
+        
+        fetchResources(url: urlComponents.url!.absoluteURL, completion: result)
+    }
     
     
     public func fetchStateDailyApi(usState: String){
-          let currentState = self.stateInfo?.state
-          
-          if(currentState == nil || currentState != usState){
+        let currentState = self.stateInfo?.state
+        
+        if(currentState == nil || currentState != usState){
             self.fetchStateDaily(from: .stateDaily, state: usState) { (result) in
-                    
-                    switch result {
-                    case .success(let states):
-                      self.usStateDialy = states
-                       print(states)
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                    }
+                
+                switch result {
+                case .success(let states):
+                    self.usStateDialy = states
+                    print(states)
+                case .failure(let error):
+                    print(error.localizedDescription)
                 }
-          }
-      }
-    
-    public func fetchStateInfo(from endpoint: Endpoint = .stateInfo, result: @escaping (Result<[StateInfo], APIServiceError>) -> Void) {
-      let trackerUrl = baseURL
-          .appendingPathComponent("api")
-          .appendingPathComponent(endpoint.rawValue)
-        print(trackerUrl)
-      fetchResources(url: trackerUrl, completion: result)
+            }
+        }
     }
     
-    public func fetchStateInfo(from endpoint: Endpoint = .usCurrent, result: @escaping (Result<[USCurrent], APIServiceError>) -> Void) {
-         let trackerUrl = baseURL
-             .appendingPathComponent("api")
-             .appendingPathComponent(endpoint.rawValue)
-           print(trackerUrl)
-         fetchResources(url: trackerUrl, completion: result)
-       }
+    public func fetchStateInfo(from endpoint: Endpoint = .stateInfo, result: @escaping (Result<[StateInfo], APIServiceError>) -> Void) {
+        let trackerUrl = baseURL
+            .appendingPathComponent("api")
+            .appendingPathComponent(endpoint.rawValue)
+        print(trackerUrl)
+        fetchResources(url: trackerUrl, completion: result)
+    }
+    
+    private func fetchUSCurrentInfo(from endpoint: Endpoint = .usCurrent, result: @escaping (Result<[USCurrent], APIServiceError>) -> Void) {
+        let trackerUrl = baseURL
+            .appendingPathComponent("api")
+            .appendingPathComponent(endpoint.rawValue)
+        print(trackerUrl)
+        fetchResources(url: trackerUrl, completion: result)
+    }
+    
+    public func fetchUSCurrentApi () {
+        self.fetchUSCurrentInfo(from: .usCurrent) { (result) in
+            
+            switch result {
+            case .success(let states):
+                self.usCurrent = states.first
+            //print(currentState)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
     
     public func fetchCounties(from endpoint: Endpoint = .counties, result: @escaping (Result<[Counties], APIServiceError>) -> Void) {
-            let trackerUrl = baseURL
-                .appendingPathComponent("api")
-                .appendingPathComponent(endpoint.rawValue)
-              print(trackerUrl)
-            fetchResources(url: trackerUrl, completion: result)
-          }
+        let trackerUrl = baseURL
+            .appendingPathComponent("api")
+            .appendingPathComponent(endpoint.rawValue)
+        print(trackerUrl)
+        fetchResources(url: trackerUrl, completion: result)
+    }
     
 }

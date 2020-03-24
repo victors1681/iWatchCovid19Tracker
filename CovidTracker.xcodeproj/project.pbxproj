@@ -11,7 +11,7 @@
 		2D3F404F936C13EE2F26E550 /* Pods_CovidTracker_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 541AC8194EFC9EB4F31EE222 /* Pods_CovidTracker_WatchKit_Extension.framework */; };
 		2E3BCE2E2428DA7A00FB2E09 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3BCE2D2428DA7A00FB2E09 /* URLSession.swift */; };
 		2E3BCE302428E2E500FB2E09 /* CovidTrackerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3BCE2F2428E2E500FB2E09 /* CovidTrackerAPI.swift */; };
-		2E839E942427B278005980F6 /* CovidTracker WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2E839E932427B278005980F6 /* CovidTracker WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2E839E942427B278005980F6 /* CovidAroundMe.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2E839E932427B278005980F6 /* CovidAroundMe.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E839E9A2427B278005980F6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E839E982427B278005980F6 /* Interface.storyboard */; };
 		2E839E9C2427B279005980F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E839E9B2427B279005980F6 /* Assets.xcassets */; };
 		2E839EA32427B279005980F6 /* CovidTracker WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2E839EA22427B279005980F6 /* CovidTracker WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -26,6 +26,8 @@
 		2E92251A24295E0500F42E81 /* ImageViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92251924295E0500F42E81 /* ImageViewContainer.swift */; };
 		2E92251C2429616F00F42E81 /* RemoteImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92251B2429616F00F42E81 /* RemoteImageURL.swift */; };
 		2E92251E24297B5200F42E81 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92251D24297B5200F42E81 /* Chart.swift */; };
+		2E9800F3242A451700E48357 /* CountryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9800F2242A451700E48357 /* CountryDetail.swift */; };
+		2E9800F5242A4E2800E48357 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9800F4242A4E2800E48357 /* Extensions.swift */; };
 		2EBEFA442429916400DCC058 /* StateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEFA432429916400DCC058 /* StateList.swift */; };
 		8482415EEAB57E73C49C5B3E /* Pods_CovidTracker_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F473804747036927136BC006 /* Pods_CovidTracker_WatchKit_App.framework */; };
 /* End PBXBuildFile section */
@@ -65,7 +67,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				2E839E942427B278005980F6 /* CovidTracker WatchKit App.app in Embed Watch Content */,
+				2E839E942427B278005980F6 /* CovidAroundMe.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,7 +89,7 @@
 		2E3BCE2D2428DA7A00FB2E09 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		2E3BCE2F2428E2E500FB2E09 /* CovidTrackerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidTrackerAPI.swift; sourceTree = "<group>"; };
 		2E839E8F2427B278005980F6 /* CovidTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E839E932427B278005980F6 /* CovidTracker WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CovidTracker WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E839E932427B278005980F6 /* CovidAroundMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidAroundMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E839E992427B278005980F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		2E839E9B2427B279005980F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E839E9D2427B279005980F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +107,8 @@
 		2E92251924295E0500F42E81 /* ImageViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewContainer.swift; sourceTree = "<group>"; };
 		2E92251B2429616F00F42E81 /* RemoteImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageURL.swift; sourceTree = "<group>"; };
 		2E92251D24297B5200F42E81 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		2E9800F2242A451700E48357 /* CountryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetail.swift; sourceTree = "<group>"; };
+		2E9800F4242A4E2800E48357 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2EBEFA432429916400DCC058 /* StateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateList.swift; sourceTree = "<group>"; };
 		4136B169FA91977861E242B8 /* Pods-CovidTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidTracker.release.xcconfig"; path = "Target Support Files/Pods-CovidTracker/Pods-CovidTracker.release.xcconfig"; sourceTree = "<group>"; };
 		42DBB23F600EE0FF6854FDB2 /* Pods-CovidTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidTracker.debug.xcconfig"; path = "Target Support Files/Pods-CovidTracker/Pods-CovidTracker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				2E839E8F2427B278005980F6 /* CovidTracker.app */,
-				2E839E932427B278005980F6 /* CovidTracker WatchKit App.app */,
+				2E839E932427B278005980F6 /* CovidAroundMe.app */,
 				2E839EA22427B279005980F6 /* CovidTracker WatchKit Extension.appex */,
 			);
 			name = Products;
@@ -194,6 +198,8 @@
 				2E92251B2429616F00F42E81 /* RemoteImageURL.swift */,
 				2E92251D24297B5200F42E81 /* Chart.swift */,
 				2EBEFA432429916400DCC058 /* StateList.swift */,
+				2E9800F2242A451700E48357 /* CountryDetail.swift */,
+				2E9800F4242A4E2800E48357 /* Extensions.swift */,
 			);
 			path = "CovidTracker WatchKit Extension";
 			sourceTree = "<group>";
@@ -268,7 +274,7 @@
 			);
 			name = "CovidTracker WatchKit App";
 			productName = "CovidTracker WatchKit App";
-			productReference = 2E839E932427B278005980F6 /* CovidTracker WatchKit App.app */;
+			productReference = 2E839E932427B278005980F6 /* CovidAroundMe.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		2E839EA12427B279005980F6 /* CovidTracker WatchKit Extension */ = {
@@ -453,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E3BCE302428E2E500FB2E09 /* CovidTrackerAPI.swift in Sources */,
+				2E9800F3242A451700E48357 /* CountryDetail.swift in Sources */,
 				2E839EAA2427B279005980F6 /* HostingController.swift in Sources */,
 				2E92251A24295E0500F42E81 /* ImageViewContainer.swift in Sources */,
 				2E92251E24297B5200F42E81 /* Chart.swift in Sources */,
@@ -464,6 +471,7 @@
 				2E839EB02427B279005980F6 /* NotificationView.swift in Sources */,
 				2E3BCE2E2428DA7A00FB2E09 /* URLSession.swift in Sources */,
 				2EBEFA442429916400DCC058 /* StateList.swift in Sources */,
+				2E9800F5242A4E2800E48357 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,7 +680,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsoluclick.CovidTracker.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CovidAroundMe;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -698,7 +706,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsoluclick.CovidTracker.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CovidAroundMe;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

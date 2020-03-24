@@ -11,6 +11,7 @@ import SwiftUI
 struct StateList: View {
     
     @ObservedObject var covidTracker = CovidTrackerAPI()
+    var currentLocation: String?
     
     var allStates: [USState] {
         guard let list = covidTracker.stateList else { return [USState]() }
@@ -21,12 +22,14 @@ struct StateList: View {
     var body: some View {
         List {
             ForEach(allStates, id: \.state) { result in
-                Text("\(result.state ?? "") : \(result.positive ?? 0)")
+                NavigationLink(destination: CountryDetail(countryData: result, currentLocation: self.currentLocation)){
+                    Text("\(result.state ?? "") : \(result.positive ?? 0)")
+                }
                }
             
         }.onAppear(){
             self.covidTracker.fetchAllStateApi()
-        }
+        }.navigationBarTitle("States")
     }
     
 }
