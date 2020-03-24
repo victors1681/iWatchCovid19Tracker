@@ -7,19 +7,6 @@
 //
 
 import SwiftUI
-import YOChartImageKit
-
-func chart() -> Image {
-    
-    let image = YOLineChartImage()
-    image.strokeWidth = 0
-    image.fillColor = .red
-    image.values = [0.0, 1.0, 2.0]
-    image.smooth = true
-    let i = image.draw(CGRect(x: 0, y: 0, width: 140, height: 20), scale: 1)
-    
-    return Image(uiImage: i)
-}
 
 struct Location: Identifiable {
     let id: Int
@@ -49,19 +36,28 @@ struct ContentView: View {
         return covidTracker.stateInfo
     }
     
-    var usState: String {
-        guard let placeMarkInfo = locationManager.plasceMark else { return "" }
+    var usStateDialy: [StateDaily]? {
+        return covidTracker.usStateDialy
+    }
+    
+    var placeMark: CLPlacemark? {
+        guard let placeMarkInfo = locationManager.plasceMark else { return nil }
        
        self.covidTracker.fetchStateApi(state: placeMarkInfo.administrativeArea ?? "")
-        return placeMarkInfo.administrativeArea ?? ""
-       }
+       self.covidTracker.fetchStateDailyApi(usState: placeMarkInfo.administrativeArea ?? "")
+       return placeMarkInfo
+    }
     
-    
-    
+     
     var body: some View {
         
-        VStack(alignment: .leading, spacing: 2){
-            Text("Covid19 Tracker: \(usState)")
+        VStack(alignment: .leading){
+              NavigationLink(destination: StateList()) {
+            VStack(alignment: .leading){
+            Text("Country")
+                .font(.footnote)
+                .foregroundColor(.gray)
+                Text("\(placeMark?.country ?? "")  \(placeMark?.administrativeArea ?? "")")
                 .font(.caption)
                 .lineLimit(nil)
                 .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
@@ -80,12 +76,22 @@ struct ContentView: View {
                 .foregroundColor(.gray)
             Text("\(stateInfo?.negative ?? 0)")
                 .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                Spacer()
+            }   .navigationBarBackButtonHidden(true)
+            }
+        }.padding()
+            .frame(width: nil)
+            .overlay(Graph().chart(states: usStateDialy), alignment: .bottomTrailing)
+            .background(
+                ImageViewContainer(imageURL: "https://source.unsplash.com/1600x900/?quarantine,\(placeMark?.administrativeArea ?? "NY")")
+                .opacity(0.3)
+                .aspectRatio(contentMode: .fit))
+
+            .frame(minWidth: 20, maxWidth: .infinity, minHeight: 20, maxHeight: .infinity, alignment: .topLeading)
+        
+       .navigationBarTitle("Covid19 Tracker")
     
-            chart()
-        }.padding().background(ImageViewContainer(imageURL: "https://source.unsplash.com/1600x900/?quarantine,\(usState)").opacity(0.3))
-      
-    
-    } 
+    }
 
 }
 

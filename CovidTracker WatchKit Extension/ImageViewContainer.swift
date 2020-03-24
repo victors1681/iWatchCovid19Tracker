@@ -21,16 +21,17 @@ struct ImageViewContainer: View {
     var body: some View {
         Image(uiImage: (image == nil) ? UIImage(imageLiteralResourceName: "quarantine") : image!)
         .resizable()
-            .aspectRatio(contentMode: .fit)
+            .aspectRatio(contentMode: .fill)
             .frame(width: 250, height: 250, alignment: .center)
         .onReceive(remoteImageURL.didChange) { data in
             self.image = UIImage(data: data) ?? UIImage()
         }
     }
 }
-
+#if DEBUG
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         ImageViewContainer(imageURL: "https://source.unsplash.com/1600x900/?quarantine,ny")
     }
 }
+#endif

@@ -25,6 +25,8 @@
 		2E92251624291BC200F42E81 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92251524291BC200F42E81 /* LocationManager.swift */; };
 		2E92251A24295E0500F42E81 /* ImageViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92251924295E0500F42E81 /* ImageViewContainer.swift */; };
 		2E92251C2429616F00F42E81 /* RemoteImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92251B2429616F00F42E81 /* RemoteImageURL.swift */; };
+		2E92251E24297B5200F42E81 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92251D24297B5200F42E81 /* Chart.swift */; };
+		2EBEFA442429916400DCC058 /* StateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEFA432429916400DCC058 /* StateList.swift */; };
 		8482415EEAB57E73C49C5B3E /* Pods_CovidTracker_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F473804747036927136BC006 /* Pods_CovidTracker_WatchKit_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +104,8 @@
 		2E92251524291BC200F42E81 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		2E92251924295E0500F42E81 /* ImageViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewContainer.swift; sourceTree = "<group>"; };
 		2E92251B2429616F00F42E81 /* RemoteImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageURL.swift; sourceTree = "<group>"; };
+		2E92251D24297B5200F42E81 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		2EBEFA432429916400DCC058 /* StateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateList.swift; sourceTree = "<group>"; };
 		4136B169FA91977861E242B8 /* Pods-CovidTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidTracker.release.xcconfig"; path = "Target Support Files/Pods-CovidTracker/Pods-CovidTracker.release.xcconfig"; sourceTree = "<group>"; };
 		42DBB23F600EE0FF6854FDB2 /* Pods-CovidTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidTracker.debug.xcconfig"; path = "Target Support Files/Pods-CovidTracker/Pods-CovidTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		541AC8194EFC9EB4F31EE222 /* Pods_CovidTracker_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidTracker_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +192,8 @@
 				2E92251524291BC200F42E81 /* LocationManager.swift */,
 				2E92251924295E0500F42E81 /* ImageViewContainer.swift */,
 				2E92251B2429616F00F42E81 /* RemoteImageURL.swift */,
+				2E92251D24297B5200F42E81 /* Chart.swift */,
+				2EBEFA432429916400DCC058 /* StateList.swift */,
 			);
 			path = "CovidTracker WatchKit Extension";
 			sourceTree = "<group>";
@@ -449,6 +455,7 @@
 				2E3BCE302428E2E500FB2E09 /* CovidTrackerAPI.swift in Sources */,
 				2E839EAA2427B279005980F6 /* HostingController.swift in Sources */,
 				2E92251A24295E0500F42E81 /* ImageViewContainer.swift in Sources */,
+				2E92251E24297B5200F42E81 /* Chart.swift in Sources */,
 				2E839EA82427B279005980F6 /* ContentView.swift in Sources */,
 				2E839EAE2427B279005980F6 /* NotificationController.swift in Sources */,
 				2E92251C2429616F00F42E81 /* RemoteImageURL.swift in Sources */,
@@ -456,6 +463,7 @@
 				2E839EAC2427B279005980F6 /* ExtensionDelegate.swift in Sources */,
 				2E839EB02427B279005980F6 /* NotificationView.swift in Sources */,
 				2E3BCE2E2428DA7A00FB2E09 /* URLSession.swift in Sources */,
+				2EBEFA442429916400DCC058 /* StateList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

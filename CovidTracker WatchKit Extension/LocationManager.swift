@@ -10,6 +10,7 @@ import Foundation
 import CoreLocation
 import Combine
 
+
 class LocationManager: NSObject, ObservableObject {
 
     override init() {
@@ -80,9 +81,8 @@ extension LocationManager: CLLocationManagerDelegate {
         guard let loc = self.locationManager.location else { return }
         
         getPlace(for: loc) { (placemark) in
+            
             self.plasceMark = placemark
-            print(placemark?.country)
-            print(placemark?.administrativeArea)
         }
  
         print(#function, location)
