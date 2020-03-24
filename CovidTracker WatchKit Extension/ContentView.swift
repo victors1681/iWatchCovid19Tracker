@@ -17,12 +17,11 @@ struct Location: Identifiable {
 
 
 struct ContentView: View {
-    @State var positive = 0
-    @State var death = 0
-    @State var negative = 0
+    @State var isViewloaded = false
     
     @ObservedObject var locationManager = LocationManager()
     @ObservedObject var covidTracker = CovidTrackerAPI()
+     
     
     var userLatitude: String {
         return "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
@@ -47,7 +46,7 @@ struct ContentView: View {
     var placeMark: CLPlacemark? {
         guard let placeMarkInfo = locationManager.plasceMark,
             let administrativeArea = placeMarkInfo.administrativeArea else { return nil }
-        
+      
         self.covidTracker.fetchStateApi(state: administrativeArea)
         self.covidTracker.fetchStateDailyApi(usState: administrativeArea)
         return placeMarkInfo
@@ -55,6 +54,7 @@ struct ContentView: View {
     
     
     var body: some View {
+        
         ScrollView{
             VStack(alignment: .leading){
                 VStack(alignment: .leading){
@@ -125,7 +125,7 @@ struct ContentView: View {
                     Graph().chart(states: usStateDialy)
                     NavigationLink(destination: GraphHistoryDetail(usStateDialy: usStateDialy)){
                         Text("\(placeMark?.administrativeArea ?? "") History")
-                            .font(.footnote) 
+                            .font(.footnote)
                     }
                 }
                 
@@ -142,7 +142,7 @@ struct ContentView: View {
                     .foregroundColor(.gray)
                 
             }.padding()
-        }
+        } 
         
     }
     
