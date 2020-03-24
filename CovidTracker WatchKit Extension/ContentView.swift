@@ -41,10 +41,11 @@ struct ContentView: View {
     }
     
     var placeMark: CLPlacemark? {
-        guard let placeMarkInfo = locationManager.plasceMark else { return nil }
+        guard let placeMarkInfo = locationManager.plasceMark,
+            let administrativeArea = placeMarkInfo.administrativeArea else { return nil }
        
-       self.covidTracker.fetchStateApi(state: placeMarkInfo.administrativeArea ?? "")
-       self.covidTracker.fetchStateDailyApi(usState: placeMarkInfo.administrativeArea ?? "")
+       self.covidTracker.fetchStateApi(state: administrativeArea)
+       self.covidTracker.fetchStateDailyApi(usState: administrativeArea)
        return placeMarkInfo
     }
     
