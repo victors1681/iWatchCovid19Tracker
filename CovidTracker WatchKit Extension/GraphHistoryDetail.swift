@@ -10,10 +10,10 @@ import SwiftUI
 
 struct GraphHistoryDetail: View {
     var usStateDialy: [StateDaily]?
-    
+   
     var body: some View {
         List{
-            ForEach(usStateDialy ?? [StateDaily]() , id: \.state) { result in
+            ForEach(usStateDialy ?? [StateDaily]() , id: \.date) { result in
                  VStack(alignment: .leading){
                     Text("\((result.date ?? 0).toDateString())")
                         .font(.caption)
