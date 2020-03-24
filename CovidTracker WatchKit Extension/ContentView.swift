@@ -55,14 +55,13 @@ struct ContentView: View {
     
     
     var body: some View {
-        
-        VStack(alignment: .leading){
-            NavigationLink(destination: StateList(currentLocation: placeMark?.administrativeArea ?? "")) {
+        ScrollView{
+            VStack(alignment: .leading){
                 VStack(alignment: .leading){
                     Text("Country")
                         .font(.footnote)
                         .foregroundColor(.gray)
-                    Text("\(placeMark?.country ?? "")  \(placeMark?.administrativeArea ?? "")")
+                    Text("\(placeMark?.country ?? "No Country Located")  \(placeMark?.administrativeArea ?? "")")
                         .font(.caption)
                         .lineLimit(nil)
                         .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
@@ -87,29 +86,63 @@ struct ContentView: View {
                     HStack() {
                         Image(systemName: "person.2")
                         Text("\(usCurrent?.positive ?? 0)")
+                            .font(.footnote)
+                            .lineLimit(nil)
                             .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
                         Spacer()
                         Image(systemName: "waveform.path.ecg")
-                          .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
-                        Text("\(usCurrent?.death ?? 0)")
-                        .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                            .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                        Text("\(usCurrent?.hospitalized ?? 0)")
+                            .font(.footnote)
+                            .animation(.easeIn)
                     }.onAppear(){
                         self.covidTracker.fetchUSCurrentApi()
                     }
-                    }.navigationBarBackButtonHidden(true)
-                   
+                    
+                    
+                }.navigationBarBackButtonHidden(true)
+                
+            }.padding()
+                .frame(width: nil)
+                .background(
+                    ImageViewContainer(imageURL: "https://source.unsplash.com/1600x900/?quarantine,\(placeMark?.administrativeArea ?? "NY")")
+                        .opacity(0.3)
+                        .aspectRatio(contentMode: .fit))
+                
+                .frame(minWidth: 20, maxWidth: .infinity, minHeight: 20, maxHeight: .infinity, alignment: .topLeading)
+                .onTapGesture {
+                    let location = self.placeMark?.administrativeArea ?? "NY"
+                    self.covidTracker.fetchStateApi(state: location, forceUpdate: true)
+                    self.covidTracker.fetchStateDailyApi(usState: location, forceUpdate: true)
+                    print("Updating...")
             }
-        }.padding()
-            .frame(width: nil)
-            .overlay(Graph().chart(states: usStateDialy), alignment: .bottomTrailing)
-            .background(
-                ImageViewContainer(imageURL: "https://source.unsplash.com/1600x900/?quarantine,\(placeMark?.administrativeArea ?? "NY")")
-                    .opacity(0.3)
-                    .aspectRatio(contentMode: .fit))
-            
-            .frame(minWidth: 20, maxWidth: .infinity, minHeight: 20, maxHeight: .infinity, alignment: .topLeading)
-            
             .navigationBarTitle("Covid19 Tracker")
+            Spacer()
+            VStack{
+                
+                VStack{
+                    
+                    Graph().chart(states: usStateDialy)
+                    NavigationLink(destination: GraphHistoryDetail(usStateDialy: usStateDialy)){
+                        Text("\(placeMark?.administrativeArea ?? "") History")
+                            .font(.footnote) 
+                    }
+                }
+                
+                NavigationLink(destination: StateList(currentLocation: placeMark?.administrativeArea ?? "")) {
+                    Text("All US State")
+                        .font(.footnote)
+                }
+                
+                Text("\( (stateInfo?.dateChecked ?? "").toDateString())")
+                    .font(.caption)
+                    .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                Text("Last Update")
+                    .font(.footnote)
+                    .foregroundColor(.gray)
+                
+            }.padding()
+        }
         
     }
     

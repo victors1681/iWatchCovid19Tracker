@@ -179,10 +179,10 @@ class CovidTrackerAPI: ObservableObject {
     }
     
     
-    public func fetchStateApi(state: String = "NY"){
+    public func fetchStateApi(state: String = "NY", forceUpdate: Bool = false){
         let currentState = self.stateInfo?.state
         
-        if(currentState == nil || currentState != state && state != ""){
+        if(currentState == nil || currentState != state && state != "" || forceUpdate){
             self.fetchState(from: .currentStates) { (result) in
                 
                 switch result {
@@ -232,10 +232,10 @@ class CovidTrackerAPI: ObservableObject {
     }
     
     
-    public func fetchStateDailyApi(usState: String){
+    public func fetchStateDailyApi(usState: String, forceUpdate: Bool = false){
         let currentState = self.stateInfo?.state
         
-        if(currentState == nil || currentState != usState){
+        if(currentState == nil || currentState != usState || forceUpdate){
             self.fetchStateDaily(from: .stateDaily, state: usState) { (result) in
                 
                 switch result {

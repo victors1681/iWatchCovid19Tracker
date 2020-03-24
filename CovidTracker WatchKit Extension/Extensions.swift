@@ -10,15 +10,30 @@ import Foundation
 
 extension String {
     func toDateString() -> String {
-          
-      let input = self
+        
+        let input = self
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         guard  let date = formatter.date(from: input) else { return ""}
-      
+        
         formatter.dateFormat = "MM/dd/yyyy HH:mm"
         return formatter.string(from: date)
         
+    }
+}
+
+extension Int {
+    func toDateString() -> String {
+         
+        let strDate = String(self)
+        
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "yyyyMMdd"
+        guard  let date = formatter.date(from: strDate) else { return ""}
+        
+        formatter.dateFormat = "MM/dd/yyyy"
+        return formatter.string(from: date)
     }
 }

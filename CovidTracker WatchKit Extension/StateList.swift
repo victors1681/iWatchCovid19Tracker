@@ -23,9 +23,33 @@ struct StateList: View {
         List {
             ForEach(allStates, id: \.state) { result in
                 NavigationLink(destination: CountryDetail(countryData: result, currentLocation: self.currentLocation)){
-                    Text("\(result.state ?? "") : \(result.positive ?? 0)")
+                    
+                    VStack(alignment: .leading){
+                        
+                        HStack() {
+                            Image(systemName: "mappin.and.ellipse")
+                            Text("\(result.state ?? "")")
+                                .font(.footnote)
+                            Spacer()
+                        }
+                        HStack() {
+                            Image(systemName: "person.2")
+                            Text("\(result.positive ?? 0)")
+                                .font(.footnote)
+                            Spacer()
+                            Image(systemName: "heart.slash")
+                                .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                            Text("\(result.death ?? 0)")
+                                .font(.footnote)
+                        }
+                        HStack() {
+                        Image(systemName: "calendar") 
+                        Text("\((result.dateChecked ?? "").toDateString())")
+                             .font(.footnote)
+                        }
+                    }.padding()
                 }
-               }
+            }
             
         }.onAppear(){
             self.covidTracker.fetchAllStateApi()

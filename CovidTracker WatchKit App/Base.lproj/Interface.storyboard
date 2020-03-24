@@ -34,7 +34,7 @@
             <objects>
                 <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="CovidAroundMe" customModuleProvider="target">
                     <items>
-                        <imageView alignment="left" image="waveform.path.ecg" catalog="system" id="Qvu-V6-bGc"/>
+                        <imageView alignment="left" image="calendar" catalog="system" id="Qvu-V6-bGc"/>
                     </items>
                 </controller>
             </objects>
@@ -42,6 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="waveform.path.ecg" catalog="system" width="64" height="62"/>
+        <image name="calendar" catalog="system" width="64" height="52"/>
     </resources>
 </document>

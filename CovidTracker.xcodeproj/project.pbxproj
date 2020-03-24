@@ -28,6 +28,7 @@
 		2E92251E24297B5200F42E81 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92251D24297B5200F42E81 /* Chart.swift */; };
 		2E9800F3242A451700E48357 /* CountryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9800F2242A451700E48357 /* CountryDetail.swift */; };
 		2E9800F5242A4E2800E48357 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9800F4242A4E2800E48357 /* Extensions.swift */; };
+		2E9800F7242A57F400E48357 /* GraphHistoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9800F6242A57F400E48357 /* GraphHistoryDetail.swift */; };
 		2EBEFA442429916400DCC058 /* StateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEFA432429916400DCC058 /* StateList.swift */; };
 		8482415EEAB57E73C49C5B3E /* Pods_CovidTracker_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F473804747036927136BC006 /* Pods_CovidTracker_WatchKit_App.framework */; };
 /* End PBXBuildFile section */
@@ -109,6 +110,7 @@
 		2E92251D24297B5200F42E81 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		2E9800F2242A451700E48357 /* CountryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetail.swift; sourceTree = "<group>"; };
 		2E9800F4242A4E2800E48357 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2E9800F6242A57F400E48357 /* GraphHistoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphHistoryDetail.swift; sourceTree = "<group>"; };
 		2EBEFA432429916400DCC058 /* StateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateList.swift; sourceTree = "<group>"; };
 		4136B169FA91977861E242B8 /* Pods-CovidTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidTracker.release.xcconfig"; path = "Target Support Files/Pods-CovidTracker/Pods-CovidTracker.release.xcconfig"; sourceTree = "<group>"; };
 		42DBB23F600EE0FF6854FDB2 /* Pods-CovidTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidTracker.debug.xcconfig"; path = "Target Support Files/Pods-CovidTracker/Pods-CovidTracker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				2EBEFA432429916400DCC058 /* StateList.swift */,
 				2E9800F2242A451700E48357 /* CountryDetail.swift */,
 				2E9800F4242A4E2800E48357 /* Extensions.swift */,
+				2E9800F6242A57F400E48357 /* GraphHistoryDetail.swift */,
 			);
 			path = "CovidTracker WatchKit Extension";
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				2E839EAC2427B279005980F6 /* ExtensionDelegate.swift in Sources */,
 				2E839EB02427B279005980F6 /* NotificationView.swift in Sources */,
 				2E3BCE2E2428DA7A00FB2E09 /* URLSession.swift in Sources */,
+				2E9800F7242A57F400E48357 /* GraphHistoryDetail.swift in Sources */,
 				2EBEFA442429916400DCC058 /* StateList.swift in Sources */,
 				2E9800F5242A4E2800E48357 /* Extensions.swift in Sources */,
 			);

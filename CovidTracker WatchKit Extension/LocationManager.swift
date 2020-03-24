@@ -12,7 +12,7 @@ import Combine
 
 
 class LocationManager: NSObject, ObservableObject {
-
+    
     override init() {
         super.init()
         self.locationManager.delegate = self
@@ -22,15 +22,15 @@ class LocationManager: NSObject, ObservableObject {
     }
     
     public var exposedLocation: CLLocation? {
-           return self.locationManager.location
+        return self.locationManager.location
     }
-
+    
     @Published var locationStatus: CLAuthorizationStatus? {
         willSet {
             objectWillChange.send()
         }
     }
-
+    
     @Published var lastLocation: CLLocation? {
         willSet {
             objectWillChange.send()
@@ -42,12 +42,12 @@ class LocationManager: NSObject, ObservableObject {
             objectWillChange.send()
         }
     }
-
+    
     var statusString: String {
         guard let status = locationStatus else {
             return "unknown"
         }
-
+        
         switch status {
         case .notDetermined: return "notDetermined"
         case .authorizedWhenInUse: return "authorizedWhenInUse"
@@ -56,60 +56,60 @@ class LocationManager: NSObject, ObservableObject {
         case .denied: return "denied"
         default: return "unknown"
         }
-
+        
     }
-
+    
     let objectWillChange = PassthroughSubject<Void, Never>()
-
+    
     private let locationManager = CLLocationManager()
     
-   
+    
     
 }
 
 extension LocationManager: CLLocationManagerDelegate {
-
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         self.locationStatus = status
         print(#function, statusString)
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         self.lastLocation = location
-  
+        
         guard let loc = self.locationManager.location else { return }
         
         getPlace(for: loc) { (placemark) in
             
             self.plasceMark = placemark
         }
- 
+        
         print(#function, location)
     }
     
-   
+    
     
     func getPlace(for location: CLLocation, completion: @escaping (CLPlacemark?) -> Void) {
-              
         
-             let geocoder = CLGeocoder()
-             geocoder.reverseGeocodeLocation(location) { placemarks, error in
-                 
-                 guard error == nil else {
-                     print("*** Error in \(#function): \(error!.localizedDescription)")
-                     completion(nil)
-                     return
-                 }
-                 
-                 guard let placemark = placemarks?[0] else {
-                     print("*** Error in \(#function): placemark is nil")
-                     completion(nil)
-                     return
-                 }
-                 
-                 completion(placemark)
-             }
-         }
-      
+        
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(location) { placemarks, error in
+            
+            guard error == nil else {
+                print("*** Error in \(#function): \(error!.localizedDescription)")
+                completion(nil)
+                return
+            }
+            
+            guard let placemark = placemarks?[0] else {
+                print("*** Error in \(#function): placemark is nil")
+                completion(nil)
+                return
+            }
+            
+            completion(placemark)
+        }
+    }
+    
 }
