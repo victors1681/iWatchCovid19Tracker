@@ -53,6 +53,16 @@ struct ContentView: View {
         return placeMarkInfo
     }
     
+    var overlay: some View {
+           VStack {
+            if( usStateDialy?.count ?? 0 > 0){
+                   ActivityContainer().hidden()
+               }else {
+                   ActivityContainer()
+               }
+           }
+       }
+    
     
     var body: some View {
         
@@ -102,6 +112,7 @@ struct ContentView: View {
                     
                     
                 }.navigationBarBackButtonHidden(true)
+                .overlay(overlay)
                 
             }.padding()
                 .frame(width: nil)
@@ -148,6 +159,7 @@ struct ContentView: View {
                     .foregroundColor(.gray)
                 
             }.padding()
+            
         } 
         
     }

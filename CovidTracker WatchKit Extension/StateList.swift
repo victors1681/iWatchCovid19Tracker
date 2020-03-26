@@ -19,6 +19,16 @@ struct StateList: View {
         return n
     }
     
+    var overlay: some View {
+          VStack {
+              if( allStates.count > 0){
+                  ActivityContainer().hidden()
+              }else {
+                  ActivityContainer()
+              }
+          }
+      }
+    
     var body: some View {
         List {
             ForEach(allStates, id: \.state) { result in
@@ -54,6 +64,7 @@ struct StateList: View {
         }.onAppear(){
             self.covidTracker.fetchAllStateApi()
         }.navigationBarTitle("States")
+        .overlay(overlay)
     }
     
 }

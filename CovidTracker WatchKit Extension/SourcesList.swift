@@ -18,6 +18,16 @@ struct SourcesList: View {
         return list
     }
     
+    var overlay: some View {
+        VStack {
+            if( allSources.count > 0){
+                ActivityContainer().hidden()
+            }else {
+                ActivityContainer()
+            }
+        }
+    }
+    
     var body: some View {
         List {
             ForEach(allSources, id: \.state) { result in
@@ -46,7 +56,7 @@ struct SourcesList: View {
         }.onAppear(){
             self.covidTracker.fetchStateSourceApi()
         }.navigationBarTitle("Sources")
-            .overlay(ActivityContainer().hidden())
+            .overlay(overlay)
     }
 }
 

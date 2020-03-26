@@ -8,26 +8,40 @@
 
 import SwiftUI
 import Combine
+import UIKit
 
 struct ImageViewContainer: View {
     
     @ObservedObject var remoteImageURL: RemoteImageURL
-     @State var image:UIImage? = nil
-    var height:CGFloat = 250
+    @State var image:UIImage? = nil
     
-    init(imageURL: String, height:CGFloat = 250 ){
+    @State var height:CGFloat = 250
+    @State var isLoadingEnabled = false
+    @State var loadingHeight: CGFloat = 250
+    
+    init(imageURL: String, height:CGFloat = 250, isLoadingEnabled: Bool = false ){
         remoteImageURL = RemoteImageURL(imageURL: imageURL)
         self.height = height
+        self.isLoadingEnabled = isLoadingEnabled
     }
     
+    var overlay: some View {
+        VStack {
+            if( image == nil && isLoadingEnabled){
+                ActivityContainer()
+            }else {
+                ActivityContainer().hidden()
+            }
+        }
+    }
     var body: some View {
         Image(uiImage: (image == nil) ? UIImage(imageLiteralResourceName: "quarantine") : image!)
-        .resizable()
+            .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: 250, height: self.height, alignment: .center)
-        .onReceive(remoteImageURL.didChange) { data in
-            self.image = UIImage(data: data) ?? UIImage()
-        }
+            .frame(width: 250, height: isLoadingEnabled && image == nil ? self.loadingHeight : self.height, alignment: .center)
+            .onReceive(remoteImageURL.didChange) { data in
+                self.image = UIImage(data: data) ?? UIImage()
+        }.overlay(overlay)
     }
 }
 #if DEBUG

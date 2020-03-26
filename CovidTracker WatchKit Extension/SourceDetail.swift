@@ -24,7 +24,7 @@ struct SourceDetail: View {
             VStack(alignment: .leading){
                 
                 VStack(alignment: .leading){
-                    ImageViewContainer(imageURL: screenShot.url ?? "", height: 500.0 )
+                    ImageViewContainer(imageURL: screenShot.url ?? "", height: 500.0, isLoadingEnabled: true )
                         .opacity(1)
                         .aspectRatio(contentMode: .fill)
                         .onReceive(covidTracker.didScreenshotUpdate) { result in
