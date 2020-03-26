@@ -54,13 +54,13 @@ struct CountryDetail: View {
                     Text("\( (countryData?.dateChecked ?? "").toDateString())")
                         .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
                 }
-                
-            }.background(
-                ImageViewContainer(imageURL: "https://source.unsplash.com/1600x900/?quarantine,\(currentLocation ?? "NY")")
-                    .opacity(0.3)
-                    .aspectRatio(contentMode: .fit))
-                .frame(minWidth: 20, maxWidth: .infinity)
-        }
+            }
+            
+        }.background(
+            ImageViewContainer(imageURL: "https://source.unsplash.com/1600x900/?quarantine,\(currentLocation ?? "NY")")
+                .opacity(0.3)
+                .aspectRatio(contentMode: .fit))
+            .frame(minWidth: 20, maxWidth: .infinity)
     }
 }
 

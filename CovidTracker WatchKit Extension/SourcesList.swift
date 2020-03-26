@@ -20,7 +20,6 @@ struct SourcesList: View {
     
     var body: some View {
         List {
-            
             ForEach(allSources, id: \.state) { result in
                 NavigationLink(destination: SourceDetail(sourceInfo: result) ){
                 VStack(alignment: .leading){
