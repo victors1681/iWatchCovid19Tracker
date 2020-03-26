@@ -7,19 +7,23 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ActivityContainer: View {
     let kPreviewBackground = Color(red: 0, green: 0, blue: 0, opacity: 0.4)
+    @State var hidden = false
+     
     
     var body: some View {
         ZStack {
+            if(hidden) {
             kPreviewBackground
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 ActivityIndicator()
                     .frame(width: 50, height: 50)
             }.foregroundColor(Color.white)
-            
+            }
         }
     }
 }

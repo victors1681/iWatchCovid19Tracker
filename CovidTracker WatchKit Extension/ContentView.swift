@@ -43,6 +43,7 @@ struct ContentView: View {
         return covidTracker.usCurrent
     }
     
+    
     var placeMark: CLPlacemark? {
         guard let placeMarkInfo = locationManager.plasceMark,
             let administrativeArea = placeMarkInfo.administrativeArea else { return nil }
@@ -132,6 +133,11 @@ struct ContentView: View {
                 NavigationLink(destination: StateList(currentLocation: placeMark?.administrativeArea ?? "")) {
                     Text("All US State")
                         .font(.footnote)
+                }
+                
+                NavigationLink(destination: SourcesList(currentLocation: placeMark?.administrativeArea ?? "")) {
+                    Text("Source")
+                       .font(.footnote)
                 }
                 
                 Text("\( (stateInfo?.dateChecked ?? "").toDateString())")

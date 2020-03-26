@@ -31,7 +31,9 @@
 		2E9800F7242A57F400E48357 /* GraphHistoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9800F6242A57F400E48357 /* GraphHistoryDetail.swift */; };
 		2E9800F9242A67C800E48357 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9800F8242A67C800E48357 /* ActivityIndicator.swift */; };
 		2E9800FB242A6A4500E48357 /* ActivityContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9800FA242A6A4500E48357 /* ActivityContainer.swift */; };
+		2EAB61D2242BD16E00A35B2D /* SourcesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAB61D1242BD16E00A35B2D /* SourcesList.swift */; };
 		2EBEFA442429916400DCC058 /* StateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEFA432429916400DCC058 /* StateList.swift */; };
+		2EE2A3D7242BE50E00D79BCD /* SourceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE2A3D6242BE50E00D79BCD /* SourceDetail.swift */; };
 		8482415EEAB57E73C49C5B3E /* Pods_CovidTracker_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F473804747036927136BC006 /* Pods_CovidTracker_WatchKit_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,7 +117,9 @@
 		2E9800F6242A57F400E48357 /* GraphHistoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphHistoryDetail.swift; sourceTree = "<group>"; };
 		2E9800F8242A67C800E48357 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		2E9800FA242A6A4500E48357 /* ActivityContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityContainer.swift; sourceTree = "<group>"; };
+		2EAB61D1242BD16E00A35B2D /* SourcesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesList.swift; sourceTree = "<group>"; };
 		2EBEFA432429916400DCC058 /* StateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateList.swift; sourceTree = "<group>"; };
+		2EE2A3D6242BE50E00D79BCD /* SourceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceDetail.swift; sourceTree = "<group>"; };
 		4136B169FA91977861E242B8 /* Pods-CovidTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidTracker.release.xcconfig"; path = "Target Support Files/Pods-CovidTracker/Pods-CovidTracker.release.xcconfig"; sourceTree = "<group>"; };
 		42DBB23F600EE0FF6854FDB2 /* Pods-CovidTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidTracker.debug.xcconfig"; path = "Target Support Files/Pods-CovidTracker/Pods-CovidTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		541AC8194EFC9EB4F31EE222 /* Pods_CovidTracker_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidTracker_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +213,8 @@
 				2E9800F6242A57F400E48357 /* GraphHistoryDetail.swift */,
 				2E9800F8242A67C800E48357 /* ActivityIndicator.swift */,
 				2E9800FA242A6A4500E48357 /* ActivityContainer.swift */,
+				2EAB61D1242BD16E00A35B2D /* SourcesList.swift */,
+				2EE2A3D6242BE50E00D79BCD /* SourceDetail.swift */,
 			);
 			path = "CovidTracker WatchKit Extension";
 			sourceTree = "<group>";
@@ -475,12 +481,14 @@
 				2E92251A24295E0500F42E81 /* ImageViewContainer.swift in Sources */,
 				2E92251E24297B5200F42E81 /* Chart.swift in Sources */,
 				2E839EA82427B279005980F6 /* ContentView.swift in Sources */,
+				2EAB61D2242BD16E00A35B2D /* SourcesList.swift in Sources */,
 				2E839EAE2427B279005980F6 /* NotificationController.swift in Sources */,
 				2E92251C2429616F00F42E81 /* RemoteImageURL.swift in Sources */,
 				2E92251624291BC200F42E81 /* LocationManager.swift in Sources */,
 				2E839EAC2427B279005980F6 /* ExtensionDelegate.swift in Sources */,
 				2E839EB02427B279005980F6 /* NotificationView.swift in Sources */,
 				2E3BCE2E2428DA7A00FB2E09 /* URLSession.swift in Sources */,
+				2EE2A3D7242BE50E00D79BCD /* SourceDetail.swift in Sources */,
 				2E9800F7242A57F400E48357 /* GraphHistoryDetail.swift in Sources */,
 				2EBEFA442429916400DCC058 /* StateList.swift in Sources */,
 				2E9800F5242A4E2800E48357 /* Extensions.swift in Sources */,

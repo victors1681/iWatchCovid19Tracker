@@ -50,7 +50,7 @@ public struct StateDaily: Codable {
     public let dateChecked: String?
 }
 
-public struct StateInfo: Codable {
+public struct StateSource: Codable {
     public let state: String?
     public let covid19SiteOld: String?
     public let covid19Site: String?
@@ -81,6 +81,15 @@ public struct Counties: Codable {
     public let pui: String?
 }
 
+
+public struct Screenshot: Codable {
+    public let ETag: String?
+    public let state: String?
+    public let filename: String?
+    public let url: String?
+    public let dateChecked: String?
+    public let size: Int?
+}
 
 class CovidTrackerAPI: ObservableObject {
     
@@ -138,6 +147,22 @@ class CovidTrackerAPI: ObservableObject {
         }
     }
     
+    @Published var stateSource: [StateSource]? {
+           willSet{
+               objectWillChange.send()
+           }
+       }
+    
+    var didScreenshotUpdate = PassthroughSubject<Screenshot?,Never>()
+    
+    @Published var siteScreenShot: Screenshot? {
+        willSet{
+            objectWillChange.send()
+        }
+        didSet {
+            didScreenshotUpdate.send(siteScreenShot)
+        }
+    }
     
     private func fetchResources<T: Decodable>(url: URL, completion: @escaping (Result<T, APIServiceError>) -> Void) {
         guard let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
@@ -249,12 +274,47 @@ class CovidTrackerAPI: ObservableObject {
         }
     }
     
-    public func fetchStateInfo(from endpoint: Endpoint = .stateInfo, result: @escaping (Result<[StateInfo], APIServiceError>) -> Void) {
+    private func fetchStateSource(from endpoint: Endpoint = .stateInfo, result: @escaping (Result<[StateSource], APIServiceError>) -> Void) {
         let trackerUrl = baseURL
             .appendingPathComponent("api")
             .appendingPathComponent(endpoint.rawValue)
         print(trackerUrl)
         fetchResources(url: trackerUrl, completion: result)
+    }
+    
+    public func fetchStateSourceApi () {
+        self.fetchStateSource(from: .stateInfo) { (result) in
+            
+            switch result {
+            case .success(let states):
+                self.stateSource = states
+            //print(currentState)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func fetchScreenshot(from endpoint: Endpoint = .stateInfo, result: @escaping (Result<[String:[Screenshot]], APIServiceError>) -> Void) {
+        let trackerUrl = baseURL
+            .appendingPathComponent("api")
+            .appendingPathComponent(endpoint.rawValue)
+        fetchResources(url: trackerUrl, completion: result)
+    }
+    
+    public func fetchScreenShotApi (state: String) {
+        self.fetchScreenshot(from: .screenshots) { (result) in
+            
+            switch result {
+            case .success(let screens):
+                guard let selected = screens[state]?.last else { return }
+                 self.siteScreenShot = selected
+                print(selected)
+            //print(currentState)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     private func fetchUSCurrentInfo(from endpoint: Endpoint = .usCurrent, result: @escaping (Result<[USCurrent], APIServiceError>) -> Void) {

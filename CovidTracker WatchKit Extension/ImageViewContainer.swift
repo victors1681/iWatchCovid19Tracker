@@ -13,16 +13,18 @@ struct ImageViewContainer: View {
     
     @ObservedObject var remoteImageURL: RemoteImageURL
      @State var image:UIImage? = nil
-
-    init(imageURL: String){
+    var height:CGFloat = 250
+    
+    init(imageURL: String, height:CGFloat = 250 ){
         remoteImageURL = RemoteImageURL(imageURL: imageURL)
+        self.height = height
     }
     
     var body: some View {
         Image(uiImage: (image == nil) ? UIImage(imageLiteralResourceName: "quarantine") : image!)
         .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: 250, height: 250, alignment: .center)
+            .frame(width: 250, height: self.height, alignment: .center)
         .onReceive(remoteImageURL.didChange) { data in
             self.image = UIImage(data: data) ?? UIImage()
         }
