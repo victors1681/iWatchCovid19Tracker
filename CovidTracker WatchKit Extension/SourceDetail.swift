@@ -41,6 +41,7 @@ struct SourceDetail: View {
                     .padding()
                 
                 VStack(alignment: .leading){
+                     VStack(alignment: .leading){
                     Text("State")
                         .font(.footnote)
                         .foregroundColor(.gray)
@@ -61,13 +62,19 @@ struct SourceDetail: View {
                     Text("\(sourceInfo?.twitter ?? "")")
                         .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
                         .font(.footnote)
-                    
                     Text("WebSite")
                         .font(.footnote)
                         .foregroundColor(.gray)
                     Text("\(sourceInfo?.covid19Site ?? "")")
                         .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
                         .font(.footnote)
+                    Text("Date Updated")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                    Text("\((screenShot.dateChecked ?? "").toDateString())")
+                        .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                        .font(.footnote)
+                    }.padding()
                 }.background(Color.black)
                     .padding()
                     .opacity(0.8)
