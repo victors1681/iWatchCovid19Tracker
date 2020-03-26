@@ -10,15 +10,25 @@ import SwiftUI
 
 struct GraphHistoryDetail: View {
     var usStateDialy: [StateDaily]?
-   
+    
+    var overlay: some View {
+        VStack {
+            if( usStateDialy?.count ?? 0 > 0){
+                ActivityContainer().hidden()
+            }else {
+                ActivityContainer()
+            }
+        }
+    }
+    
     var body: some View {
         List{
             ForEach(usStateDialy ?? [StateDaily]() , id: \.date) { result in
-                 VStack(alignment: .leading){
+                VStack(alignment: .leading){
                     Text("\((result.date ?? 0).toDateString())")
                         .font(.caption)
-                    .foregroundColor(.gray)
-                   HStack() {
+                        .foregroundColor(.gray)
+                    HStack() {
                         Image(systemName: "person.2")
                         Text("\(result.positive ?? 0)")
                             .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)

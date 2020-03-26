@@ -16,7 +16,7 @@ struct ImageViewContainer: View {
     @State var image:UIImage? = nil
     
     @State var height:CGFloat = 250
-    @State var isLoadingEnabled = false
+    var isLoadingEnabled = false
     @State var loadingHeight: CGFloat = 250
     
     init(imageURL: String, height:CGFloat = 250, isLoadingEnabled: Bool = false ){
@@ -27,7 +27,8 @@ struct ImageViewContainer: View {
     
     var overlay: some View {
         VStack {
-            if( image == nil && isLoadingEnabled){
+          
+            if( self.image == nil && self.isLoadingEnabled){
                 ActivityContainer()
             }else {
                 ActivityContainer().hidden()
